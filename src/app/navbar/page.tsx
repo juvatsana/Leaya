@@ -1,5 +1,4 @@
 'use client';
-
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -14,12 +13,14 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import Logo from '@/components/logo';
+import Link from 'next/link'
+import Image from 'next/image';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Home', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-
-export default function navbar() {
+export default function Navbar() {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
     const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
   
@@ -39,28 +40,10 @@ export default function navbar() {
     };
   
     return (
-      <AppBar position="static">
-        <Container maxWidth="xl">
+      <AppBar position="static" sx={{ backgroundColor: '#161616', color:"green"}} >
+        <Container maxWidth="xl" >
           <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                mr: 2,
-                display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }}
-            >
-              LOGO
-            </Typography>
-  
+            <Logo></Logo>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
                 size="large"
@@ -95,6 +78,7 @@ export default function navbar() {
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))}
+
               </Menu>
             </Box>
             <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -118,22 +102,33 @@ export default function navbar() {
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
-                >
-                  {page}
-                </Button>
+                <Link key={page} href={page}>
+                  <Button
+                    key={page}
+                    onClick={handleCloseNavMenu}
+                    sx={{ 
+                      my: 2, color: 'white', 
+                      display: 'block',
+                      fontFamily: "Poppins",
+                      fontStyle: "normal",
+                      opacity: 0.5,
+                    }}
+                  >
+                    {page}
+                  </Button>
+                </Link>
               ))}
             </Box>
-  
+            <Link href="#">
+              <Image src="assets/facebook.svg" alt='logo de Facebook' width="25" height="25"></Image>
+            </Link>
+            <Link href="#">
+              <Image src="assets/instagram.svg" alt='logo de Instagram' width="25" height="25"></Image>
+            </Link>
+            <Link href="#">
+              <Image src="assets/twitter.svg" alt='logo de Twitter' width="25" height="25"></Image>
+            </Link>
             <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                </IconButton>
-              </Tooltip>
               <Menu
                 sx={{ mt: '45px' }}
                 id="menu-appbar"
@@ -162,3 +157,5 @@ export default function navbar() {
       </AppBar>
     )
 }
+
+
