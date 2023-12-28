@@ -14,7 +14,13 @@ import Typography from '@mui/material/Typography'
 import Link from 'next/link'
 import * as React from 'react'
 
-const pages = ['A propos de nous', 'Fonctionnalités', 'Sécurité et confidentialité', 'Rejoindre l’élite', 'Contacts']
+const pages = [
+  'A propos de nous',
+  'Fonctionnalités',
+  'Sécurité et confidentialité',
+  'Rejoindre l’élite',
+  'Contacts',
+]
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
 export default function Navbar() {
@@ -39,10 +45,7 @@ export default function Navbar() {
   }
 
   return (
-    <AppBar
-      position="static"
-      sx={{ backgroundColor: '#161616'}}
-    >
+    <AppBar position="static" sx={{ backgroundColor: 'transparent' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Logo></Logo>
@@ -55,7 +58,7 @@ export default function Navbar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-            <MenuIcon />
+              <MenuIcon />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -103,7 +106,7 @@ export default function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Link key={page} href={page} style={{textDecoration: "none"}}>
+              <Link key={page} href={page} style={{ textDecoration: 'none' }}>
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
@@ -114,29 +117,29 @@ export default function Navbar() {
                     display: 'block',
                     fontFamily: 'Poppins',
                     fontStyle: 'normal',
-                    listStyle:"none"
+                    listStyle: 'none',
                   }}
                 >
                   {page}
                 </Button>
               </Link>
             ))}
-          <Link href="#" style={{textDecoration: "none"}}>
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{
-                my: 2,
-                color: 'black',
-                display: 'block',
-                fontFamily: 'Poppins',
-                fontStyle: 'normal',
-                backgroundColor: "#B18F40",
-                borderRadius: "15px"
-              }}
-            >
-              Télécharger l'application
-            </Button>
-          </Link>
+            <Link href="#" style={{ textDecoration: 'none' }}>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{
+                  my: 2,
+                  color: 'black',
+                  display: 'block',
+                  fontFamily: 'Poppins',
+                  fontStyle: 'normal',
+                  backgroundColor: '#B18F40',
+                  borderRadius: '15px',
+                }}
+              >
+                Télécharger l'application
+              </Button>
+            </Link>
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Menu
