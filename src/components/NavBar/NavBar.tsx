@@ -45,7 +45,7 @@ export default function Navbar() {
   }
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'transparent' }}>
+    <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: "none"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Logo></Logo>
@@ -115,7 +115,6 @@ export default function Navbar() {
                     mx: 2,
                     color: 'white',
                     display: 'block',
-                    fontFamily: 'Poppins',
                     fontStyle: 'normal',
                     listStyle: 'none',
                   }}
@@ -124,14 +123,14 @@ export default function Navbar() {
                 </Button>
               </Link>
             ))}
-            <Link href="#" style={{ textDecoration: 'none' }}>
+            <Link href="#" style={{ textDecoration: 'none'}}>
               <Button
                 onClick={handleCloseNavMenu}
+                style={{ backgroundColor: '#B18F40', borderRadius: '50px', padding: "5px" }}
                 sx={{
                   my: 2,
                   color: 'black',
                   display: 'block',
-                  fontFamily: 'Poppins',
                   fontStyle: 'normal',
                   backgroundColor: '#B18F40',
                   borderRadius: '15px',
