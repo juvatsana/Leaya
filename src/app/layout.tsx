@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import React from 'react'
 import './globals.css'
 
@@ -14,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-      <html lang="fr">
-        <body className='font-custom'>{children}</body>
-      </html>
+    <html lang="fr">
+      <body>{children}</body>
+    </html>
   )
 }

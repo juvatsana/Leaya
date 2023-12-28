@@ -45,7 +45,10 @@ export default function Navbar() {
   }
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: "none"}}>
+    <AppBar
+      position="static"
+      sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Logo></Logo>
@@ -95,8 +98,6 @@ export default function Navbar() {
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
@@ -110,23 +111,26 @@ export default function Navbar() {
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
+                  style={{ textTransform: 'initial', fontFamily: 'Raleway' }}
                   sx={{
                     my: 2,
                     mx: 2,
                     color: 'white',
                     display: 'block',
-                    fontStyle: 'normal',
-                    listStyle: 'none',
                   }}
                 >
                   {page}
                 </Button>
               </Link>
             ))}
-            <Link href="#" style={{ textDecoration: 'none'}}>
+            <Link href="#" style={{ textDecoration: 'none' }}>
               <Button
                 onClick={handleCloseNavMenu}
-                style={{ backgroundColor: '#B18F40', borderRadius: '50px', padding: "5px" }}
+                style={{
+                  backgroundColor: '#B18F40',
+                  borderRadius: '50px',
+                  padding: '5px',
+                }}
                 sx={{
                   my: 2,
                   color: 'black',

@@ -5,11 +5,7 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        custom: ['sans-serif'],
-      },
-    },
+    extend: {},
   },
   plugins: [],
 }
