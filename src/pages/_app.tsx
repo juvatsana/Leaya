@@ -1,5 +1,4 @@
 import type { AppProps } from 'next/app'
-import { Raleway } from 'next/font/google'
 import 'tailwindcss/tailwind.css'
 
 

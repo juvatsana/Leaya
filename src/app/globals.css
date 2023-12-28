@@ -3,9 +3,10 @@
 @import 'tailwindcss/utilities';
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-body {
+body, html {
   margin: 0;
   padding: 0;
   height: 100vh;
   width: 100vh;
 }
+

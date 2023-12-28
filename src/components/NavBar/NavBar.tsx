@@ -117,6 +117,9 @@ export default function Navbar() {
                     mx: 2,
                     color: 'white',
                     display: 'block',
+                    fontStyle: 'normal',
+                    listStyle: 'none',
+                    textTransform: 'none'
                   }}
                 >
                   {page}
@@ -138,6 +141,7 @@ export default function Navbar() {
                   fontStyle: 'normal',
                   backgroundColor: '#B18F40',
                   borderRadius: '15px',
+                  textTransform: 'none'
                 }}
               >
                 Télécharger l'application
