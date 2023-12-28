@@ -49,7 +49,7 @@ export default function Navbar() {
       position="static"
       sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" className='flex justify-center p-5'>
         <Toolbar disableGutters>
           <Logo></Logo>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -88,30 +88,14 @@ export default function Navbar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
+        
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Link key={page} href={page} style={{ textDecoration: 'none' }}>
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
-                  style={{ textTransform: 'initial', fontFamily: 'Raleway' }}
+                  style={{ textTransform: 'initial' }}
                   sx={{
                     my: 2,
                     mx: 2,
