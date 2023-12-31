@@ -1,6 +1,5 @@
 'use client'
 import Logo from '@/components/Logo/Logo'
-import AdbIcon from '@mui/icons-material/Adb'
 import MenuIcon from '@mui/icons-material/Menu'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
@@ -49,10 +48,16 @@ export default function Navbar() {
       position="static"
       sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}
     >
-      <Container maxWidth="xl" className='flex justify-center p-5'>
+      <Container maxWidth="xl" className="flex justify-center p-5">
         <Toolbar disableGutters>
           <Logo></Logo>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: 'flex', md: 'none' },
+              marginLeft: '8rem',
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -88,7 +93,7 @@ export default function Navbar() {
               ))}
             </Menu>
           </Box>
-        
+
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Link key={page} href={page} style={{ textDecoration: 'none' }}>
@@ -103,7 +108,7 @@ export default function Navbar() {
                     display: 'block',
                     fontStyle: 'normal',
                     listStyle: 'none',
-                    textTransform: 'none'
+                    textTransform: 'none',
                   }}
                 >
                   {page}
@@ -125,7 +130,7 @@ export default function Navbar() {
                   fontStyle: 'normal',
                   backgroundColor: '#B18F40',
                   borderRadius: '15px',
-                  textTransform: 'none'
+                  textTransform: 'none',
                 }}
               >
                 Télécharger l'application
