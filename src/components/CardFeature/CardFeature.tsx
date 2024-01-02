@@ -5,8 +5,15 @@ import Typography from '@mui/material/Typography';
 const CardFeature = (props: any) => {
     return (
         <Card 
-        sx={{ maxWidth: 394, maxHeight: 289, width: 401, height: 289}} 
-        style={{borderRadius: "71px 71px 0 0", border: '#B18F40 6px solid', borderCollapse: 'collapse', backgroundColor: '#B18F40', margin: '5px'}}>
+        className='hover:opacity-50 cursor-pointer'
+        sx={{ maxWidth: 394, maxHeight: 289, width: 401, height: 289, transition: '.3s'}} 
+        style={{
+            borderRadius: "71px 71px 0 0", 
+            border: '#B18F40 6px solid', 
+            borderCollapse: 'collapse', 
+            backgroundColor: '#B18F40', 
+            margin: '5px'
+        }}>
             <CardMedia
             component='img'
             sx={{ height: '80%' }}
