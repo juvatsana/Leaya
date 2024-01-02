@@ -14,11 +14,11 @@ import Link from 'next/link'
 import * as React from 'react'
 
 const pages = [
-  {file: 'about', label: 'A propos de nous'},
-  {file: 'about', label: 'Fonctionnalités'},
-  {file: 'about', label: 'Sécurité et confidentialité'},
-  {file: 'about', label: "Rejoindre l’élite"},
-  {file: 'contact', label: 'Contacts'},
+  { file: 'about', label: 'A propos de nous' },
+  { file: 'about', label: 'Fonctionnalités' },
+  { file: 'about', label: 'Sécurité et confidentialité' },
+  { file: 'about', label: 'Rejoindre l’élite' },
+  { file: 'contact', label: 'Contacts' },
 ]
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
@@ -97,7 +97,11 @@ export default function Navbar() {
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Link key={page.label} href={page.file} style={{ textDecoration: 'none' }}>
+              <Link
+                key={page.label}
+                href={page.file}
+                style={{ textDecoration: 'none' }}
+              >
                 <Button
                   key={page.label}
                   onClick={handleCloseNavMenu}

@@ -1,4 +1,3 @@
-import Navbar from '@/components/NavBar/NavBar'
 import { Grid, useMediaQuery, useTheme } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -45,41 +44,41 @@ export default function App() {
       }
 
   return (
-      <Grid container style={{ justifyContent: 'center' }}>
-        <Grid item sm={12} md={6} className="relative">
-          <h1 style={styleTitle}>
-            <span style={{ color: '#B18F40' }}>Leaya Elite</span>, la
-            technologue au coeur de l'excellence
-          </h1>
-          <Link href="#">
-            <Image
-              className={styleDownload}
-              src="./assets/download_app.svg"
-              alt="lien de téléchargement"
-              width="600"
-              height="600"
-            />
-          </Link>
-        </Grid>
-        <Grid
-          item
-          sm={12}
-          md={6}
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            position: 'relative',
-          }}
-        >
-          <div style={styleImage}>
-            <Image
-              src="./assets/phone.svg"
-              alt="phone"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-        </Grid>
+    <Grid container style={{ justifyContent: 'center' }}>
+      <Grid item sm={12} md={6} className="relative">
+        <h1 style={styleTitle}>
+          <span style={{ color: '#B18F40' }}>Leaya Elite</span>, la technologue
+          au coeur de l'excellence
+        </h1>
+        <Link href="#">
+          <Image
+            className={styleDownload}
+            src="./assets/download_app.svg"
+            alt="lien de téléchargement"
+            width="600"
+            height="600"
+          />
+        </Link>
       </Grid>
+      <Grid
+        item
+        sm={12}
+        md={6}
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          position: 'relative',
+        }}
+      >
+        <div style={styleImage}>
+          <Image
+            src="./assets/phone.svg"
+            alt="phone"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+      </Grid>
+    </Grid>
   )
 }
