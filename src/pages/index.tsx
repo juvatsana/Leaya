@@ -71,11 +71,7 @@ export default function App() {
         }}
       >
         <div style={styleImage}>
-          <Image
-            src="./assets/phone.svg"
-            alt="phone"
-            layout="fill"
-          />
+          <Image src="./assets/phone.svg" alt="phone" layout="fill" />
         </div>
       </Grid>
     </Grid>

@@ -14,11 +14,11 @@ import Link from 'next/link'
 import * as React from 'react'
 
 const pages = [
-  {file: 'about', label: 'A propos de nous'},
-  {file: 'features', label: 'Fonctionnalités'},
-  {file: 'about', label: 'Sécurité et confidentialité'},
-  {file: 'about', label: "Rejoindre l’élite"},
-  {file: 'contact', label: 'Contacts'},
+  { file: 'about', label: 'A propos de nous' },
+  { file: 'features', label: 'Fonctionnalités' },
+  { file: 'about', label: 'Sécurité et confidentialité' },
+  { file: 'elite', label: 'Rejoindre l’élite' },
+  { file: 'contact', label: 'Contacts' },
 ]
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
@@ -51,9 +51,7 @@ export default function Navbar() {
     >
       <Container maxWidth="xl" className="flex justify-center p-5">
         <Toolbar disableGutters>
-          <Link href={"/"}>
-            <Logo></Logo>
-          </Link>
+          <Logo></Logo>
           <Box
             sx={{
               flexGrow: 1,
@@ -90,9 +88,15 @@ export default function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.label} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.label}</Typography>
-                </MenuItem>
+                <Link
+                  key={page.label}
+                  href={page.file}
+                  style={{ textDecoration: 'none' }}
+                >
+                  <MenuItem key={page.label} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page.label}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>

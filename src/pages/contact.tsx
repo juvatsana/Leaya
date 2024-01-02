@@ -127,6 +127,7 @@ export default function contact() {
                   borderRadius: '8px',
                   backgroundColor: '#B18F40',
                   width: '70%',
+                  height: '110px',
                 }}
                 className="placeholder-white text-sm"
                 placeholder="Veuillez entrer votre message"
