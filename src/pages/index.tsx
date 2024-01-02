@@ -14,7 +14,6 @@ const heroSectionStyle = {
 export default function App() {
   const theme = useTheme()
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
-
   const styleTitle: CSSProperties = isSmallScreen
     ? {
         position: 'relative',
@@ -46,46 +45,41 @@ export default function App() {
       }
 
   return (
-    <>
-      <div style={heroSectionStyle} className="min-h-screen overflow-hidden">
-        <Navbar></Navbar>
-        <Grid container style={{ justifyContent: 'center' }}>
-          <Grid item sm={12} md={6} className="relative">
-            <h1 style={styleTitle}>
-              <span style={{ color: '#B18F40' }}>Leaya Elite</span>, la
-              technologue au coeur de l'excellence
-            </h1>
-            <Link href="#">
-              <Image
-                className={styleDownload}
-                src="./assets/download_app.svg"
-                alt="lien de téléchargement"
-                width="600"
-                height="600"
-              />
-            </Link>
-          </Grid>
-          <Grid
-            item
-            sm={12}
-            md={6}
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              position: 'relative',
-            }}
-          >
-            <div style={styleImage}>
-              <Image
-                src="./assets/phone.svg"
-                alt="phone"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-          </Grid>
+      <Grid container style={{ justifyContent: 'center' }}>
+        <Grid item sm={12} md={6} className="relative">
+          <h1 style={styleTitle}>
+            <span style={{ color: '#B18F40' }}>Leaya Elite</span>, la
+            technologue au coeur de l'excellence
+          </h1>
+          <Link href="#">
+            <Image
+              className={styleDownload}
+              src="./assets/download_app.svg"
+              alt="lien de téléchargement"
+              width="600"
+              height="600"
+            />
+          </Link>
         </Grid>
-      </div>
-    </>
+        <Grid
+          item
+          sm={12}
+          md={6}
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            position: 'relative',
+          }}
+        >
+          <div style={styleImage}>
+            <Image
+              src="./assets/phone.svg"
+              alt="phone"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+        </Grid>
+      </Grid>
   )
 }
