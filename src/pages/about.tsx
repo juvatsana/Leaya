@@ -5,7 +5,7 @@ import Image from 'next/image'
 const about = () => {
 
   return (
-      <Grid container style={{ justifyContent: 'center', color: 'white'}} className='p-0 py-10 m-0 overflow-hidden'>
+    <Grid container style={{ justifyContent: 'center', color: 'white'}} alignItems="center" justifyContent="center" className='p-0 py-10 m-0 overflow-hidden'>
       <Grid item sm={12} md={6} className="relative">
         <Image 
           className='relative -translate-x-24'
@@ -13,7 +13,7 @@ const about = () => {
           alt="illustration d'une personne utilisant l'application Leaya sur smartphone"
           width={1000}
           height={676}
-          style={{borderRadius: "97px"}}
+          style={{borderRadius: "97px" }}
         />
       </Grid>
       <Grid item sm={12} md={6} className="relative flex-col text-justify p-10 md:text-2xl ">

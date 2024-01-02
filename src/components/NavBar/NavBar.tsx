@@ -14,12 +14,13 @@ import Link from 'next/link'
 import * as React from 'react'
 
 const pages = [
-  'A propos de nous',
-  'Fonctionnalités',
-  'Sécurité et confidentialité',
-  'Rejoindre l’élite',
-  'Contacts',
+  {file: 'about', label: 'A propos de nous'},
+  {file: 'about', label: 'Fonctionnalités'},
+  {file: 'about', label: 'Sécurité et confidentialité'},
+  {file: 'about', label: "Rejoindre l’élite"},
+  {file: 'contact', label: 'Contacts'},
 ]
+
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
 export default function Navbar() {
@@ -87,8 +88,8 @@ export default function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.label} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page.label}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -96,9 +97,9 @@ export default function Navbar() {
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Link key={page} href={page} style={{ textDecoration: 'none' }}>
+              <Link key={page.label} href={page.file} style={{ textDecoration: 'none' }}>
                 <Button
-                  key={page}
+                  key={page.label}
                   onClick={handleCloseNavMenu}
                   style={{ textTransform: 'initial' }}
                   sx={{
@@ -111,7 +112,7 @@ export default function Navbar() {
                     textTransform: 'none',
                   }}
                 >
-                  {page}
+                  {page.label}
                 </Button>
               </Link>
             ))}
