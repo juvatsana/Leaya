@@ -21,7 +21,7 @@ const about = () => {
         style={{
             position: 'relative',
             color: 'white',
-            fontSize: '40px',
+            fontSize: '48px',
             fontWeight: '600',
             padding: '2rem',
             lineHeight: '3.5rem',
