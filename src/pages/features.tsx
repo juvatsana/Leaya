@@ -27,7 +27,7 @@ const features = () => {
             }}>
                 UNE APPLICATION AUX MULTIPLES FONCTIONNALITÉS
             </h1>
-            <p style={{fontSize: "24px", padding: '2rem'}}>
+            <p style={{fontSize: "24px", paddingBottom: '2rem'}}>
                 L'une des caractéristiques uniques de <span style={{ color: '#B18F40' }}>LEAYA ELITE</span> est son algorithme sophistiqué 
                 qui permet de trouver des personnes compatibles en fonction des données collectées. 
                 Avec <span style={{ color: '#B18F40' }}>LEAYA ELITE</span>, les utilisateurs bénéficieront de fonctionnalités pratiques telles que :
