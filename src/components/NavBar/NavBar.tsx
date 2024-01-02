@@ -16,7 +16,7 @@ import * as React from 'react'
 const pages = [
   {file: 'about', label: 'A propos de nous'},
   {file: 'features', label: 'Fonctionnalités'},
-  {file: 'about', label: 'Sécurité et confidentialité'},
+  {file: 'security', label: 'Sécurité et confidentialité'},
   {file: 'about', label: "Rejoindre l’élite"},
   {file: 'contact', label: 'Contacts'},
 ]
