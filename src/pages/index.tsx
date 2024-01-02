@@ -75,7 +75,6 @@ export default function App() {
             src="./assets/phone.svg"
             alt="phone"
             layout="fill"
-            objectFit="cover"
           />
         </div>
       </Grid>
