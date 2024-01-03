@@ -47,7 +47,7 @@ const menuItems = [
 
 const menuMobile = [
   { file: 'about', label: 'A propos de nous' },
-  { file: 'reponsable', label: 'Une plateforme responsable' },
+  { file: 'responsable', label: 'Une plateforme responsable' },
   { file: 'elite-africaine', label: "Connecter l'Elite Africaine" },
   { file: 'features', label: 'Fonctionnalités' },
   { file: 'security', label: 'Sécurité et confidentialité' },

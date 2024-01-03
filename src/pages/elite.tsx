@@ -5,26 +5,31 @@ const Elite = () => {
   return (
     <Grid
       container
-      style={{ justifyContent: 'center', color: 'white' }}
-      alignItems="center"
-      justifyContent="center"
-      className="p-0  py-10 m-0 overflow-hidden"
+      style={{ color: 'white'}}
+      className="p-0 m-0"
     >
-      <Grid item sm={12} md={6} className="relative">
+      <Grid 
+        item 
+        sx={{ display: { xs: 'none', sm: 'none', md: 'none', lg: 'block', xl: 'block' } }} 
+        sm={12} 
+        md={6}
+        lg={6}  
+        className="relative">
         <Image
-          className="relative -translate-x-20"
-          src="/assets/elite.png"
-          alt="illustration d'une personne utilisant l'application Leaya sur smartphone"
-          width={1000}
-          height={676}
-          style={{ borderRadius: '97px' }}
+          className="fixed bottom-0"
+          src="/assets/phone_hand.png"
+          alt="Une main tenant un smartphone utilisant l'application Leaya"
+          width={534}
+          height={850}
         />
       </Grid>
       <Grid
         item
         sm={12}
-        md={6}
-        className="relative flex-col text-justify p-10 md:text-2xl "
+        md={12}
+        lg={6}
+        className="relative flex-col text-justify md:text-2xl"
+        style={{fontSize: "24px", padding: '5%'}}
       >
         <h1
           style={{
@@ -32,20 +37,21 @@ const Elite = () => {
             color: 'white',
             fontSize: '40px',
             fontWeight: '600',
-            padding: '2rem',
+            paddingBottom: '2rem',
             lineHeight: '3.5rem',
             textAlign: 'center',
           }}
         >
-          CONNECTER L’ELITE AFRICAINE
+          COMMENT REJOINDRE <span style={{ color: '#B18F40' }}>LEAYA ELITE</span>
         </h1>
         <p>
-          <span style={{ color: '#B18F40' }}>LEAYA ELITE</span> est
-          principalement destinée aux professionnels qui cherchent à étendre
-          leur réseau et à explorer de nouvelles opportunités, mais aussi à ceux
-          qui cherchent l’amour. Les différentes cibles de la plateforme sont :
+          <span style={{ color: '#B18F40' }}>LEAYA ELITE</span> 
+          est une application de rencontres payante accessible 
+          sur les plateformes App Store et Play Store.
         </p>
         <br />
+        <p>L'adhésion est conditionnée par :</p>
+        <br />
         <div
           style={{
             backgroundColor: '#B18F40',
@@ -53,8 +59,7 @@ const Elite = () => {
             padding: '15px',
           }}
         >
-          <span style={{ fontWeight: 'bold' }}>Homme et femme d’influence</span>
-          : cadre d’entreprise, politicien, auteur, etc
+          Une recommandation ou une invitation d'un utilisateur déjà enregistré sur l'application.
         </div>
         <br />
         <div
@@ -64,8 +69,7 @@ const Elite = () => {
             padding: '15px',
           }}
         >
-          <span style={{ fontWeight: 'bold' }}>Homme et femme d’affaires</span>:
-          entrepreneur, investisseur, trader, etc
+          La validation du dossier de candidature que soumet l’utilisateur.
         </div>
         <br />
         <div
@@ -75,27 +79,15 @@ const Elite = () => {
             padding: '15px',
           }}
         >
-          <span style={{ fontWeight: 'bold' }}>Artistes</span>: musique, cinéma,
-          média, etc
-        </div>
-        <br />
-        <div
-          style={{
-            backgroundColor: '#B18F40',
-            borderRadius: '35px',
-            padding: '15px',
-          }}
-        >
-          <span style={{ fontWeight: 'bold' }}>Célébrités</span>: sportif,
-          animateur TV, influenceur, etc
+          <p>Le paiement d’un abonnement</p>
+          <br />
+          <p>Mensuel :  39.99 €</p>
+          <p>Trimestriel : 104.99 €</p>
+          <p>Annuel : 404.99 €</p>
         </div>
       </Grid>
     </Grid>
   )
 }
-
-// LEAYA ELITE est principalement destinée aux professionnels qui cherchent à étendre leur réseau et à explorer de nouvelles opportunités, mais aussi à ceux qui cherchent l’amour. Les différentes cibles de la plateforme sont : Homme et femme d’influence : cadre d’entreprise, politicien, auteur, etc Homme et femme d’affaires : entrepreneur, investisseur, trader, etc
-//Artistes : musique, cinéma, média, etc
-//Célébrités : sportif, animateur TV, influenceur, etc
 
 export default Elite
