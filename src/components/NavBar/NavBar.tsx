@@ -6,6 +6,7 @@ import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Container from '@mui/material/Container'
 import IconButton from '@mui/material/IconButton'
+
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import Toolbar from '@mui/material/Toolbar'
@@ -61,6 +62,7 @@ export default function Navbar() {
   )
   const [anchorElSubMenu, setAnchorElSubMenu] =
     React.useState<null | HTMLElement>(null)
+
   const isSubMenuOpen = anchorElSubMenu !== null
 
   const handleOpenMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -135,7 +137,6 @@ export default function Navbar() {
               ))}
             </Menu>
           </Box>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {menuItems.map((menuItem) => (
               <div key={menuItem.label}>
@@ -144,8 +145,6 @@ export default function Navbar() {
                     <Button
                       color="inherit"
                       onClick={handleOpenSubMenu}
-                      onMouseOver={handleOpenSubMenu}
-                      onMouseOut={handleCloseSubMenu}
                       style={{ textTransform: 'initial' }}
                       sx={{
                         my: 2,
@@ -168,7 +167,9 @@ export default function Navbar() {
                         <Link
                           key={subMenuItem.label}
                           href={subMenuItem.file}
-                          style={{ textDecoration: 'none' }}
+                          style={{
+                            textDecoration: 'none',
+                          }}
                         >
                           <MenuItem key={subMenuItem.label}>
                             <Typography color="inherit">
