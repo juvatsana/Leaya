@@ -13,6 +13,37 @@ import Typography from '@mui/material/Typography'
 import Link from 'next/link'
 import * as React from 'react'
 
+const menuItems = [
+  {
+    label: 'A propos de nous',
+    file: 'about',
+    subMenu: [
+      { label: 'Une plateforme responsable', path: 'about/reponsable' },
+      { label: "Connecter l'Elite Africaine", path: 'about/elite' },
+    ],
+  },
+  {
+    label: 'Fonctionnalités',
+    file: 'features',
+    subMenu: [],
+  },
+  {
+    label: 'Sécurité et confidentialité',
+    file: 'security',
+    subMenu: [],
+  },
+  {
+    label: 'Rejoindre l’élite',
+    file: 'elite',
+    subMenu: [],
+  },
+  {
+    label: 'Contacts',
+    file: 'contact',
+    subMenu: [],
+  },
+]
+
 const pages = [
   { file: 'about', label: 'A propos de nous' },
   { file: 'features', label: 'Fonctionnalités' },
@@ -44,6 +75,16 @@ export default function Navbar() {
     setAnchorElUser(null)
   }
 
+  const [anchorEl, setAnchorEl] = React.useState(null)
+
+  const handleMenuOpen = (event: any) => {
+    setAnchorEl(event.currentTarget)
+  }
+
+  const handleMenuClose = () => {
+    setAnchorEl(null)
+  }
+
   return (
     <AppBar
       position="static"
@@ -51,9 +92,7 @@ export default function Navbar() {
     >
       <Container maxWidth="xl" className="flex justify-center p-5">
         <Toolbar disableGutters>
-          <Link href={"/"}>
-            <Logo></Logo>
-          </Link>
+          <Logo></Logo>
           <Box
             sx={{
               flexGrow: 1,
@@ -89,7 +128,7 @@ export default function Navbar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
+              {menuItems.map((page) => (
                 <Link
                   key={page.label}
                   href={page.file}
@@ -104,7 +143,70 @@ export default function Navbar() {
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {menuItems.map((menuItem) => (
+              <div key={menuItem.label}>
+                {menuItem.subMenu.length > 0 ? (
+                  <div>
+                    <Button
+                      color="inherit"
+                      onClick={handleMenuOpen}
+                      onMouseOver={handleMenuOpen}
+                      onMouseOut={handleMenuClose}
+                      style={{ textTransform: 'initial' }}
+                      sx={{
+                        my: 2,
+                        mx: 2,
+                        color: 'white',
+                        display: 'block',
+                        fontStyle: 'normal',
+                        listStyle: 'none',
+                        textTransform: 'none',
+                      }}
+                    >
+                      {menuItem.label}
+                      TODO
+                    </Button>
+                    <Menu
+                      anchorEl={anchorEl}
+                      open={Boolean(anchorEl)}
+                      onClose={handleMenuClose}
+                    >
+                      {menuItem.subMenu.map((subMenuItem) => (
+                        <MenuItem key={subMenuItem.label}>
+                          <Typography color="inherit">
+                            {subMenuItem.label}
+                          </Typography>
+                        </MenuItem>
+                      ))}
+                    </Menu>
+                  </div>
+                ) : (
+                  <Link
+                    key={menuItem.label}
+                    href={menuItem.file}
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <Button
+                      key={menuItem.label}
+                      onClick={handleCloseNavMenu}
+                      style={{ textTransform: 'initial' }}
+                      sx={{
+                        my: 2,
+                        mx: 2,
+                        color: 'white',
+                        display: 'block',
+                        fontStyle: 'normal',
+                        listStyle: 'none',
+                        textTransform: 'none',
+                      }}
+                    >
+                      {menuItem.label}
+                    </Button>
+                  </Link>
+                )}
+              </div>
+            ))}
+            {/* {menuItems.map((page) => (
               <Link
                 key={page.label}
                 href={page.file}
@@ -127,7 +229,7 @@ export default function Navbar() {
                   {page.label}
                 </Button>
               </Link>
-            ))}
+            ))} */}
             <Link href="#" style={{ textDecoration: 'none' }}>
               <Button
                 onClick={handleCloseNavMenu}
