@@ -1,7 +1,9 @@
 import Navbar from '@/components/NavBar/NavBar'
 import { ThemeProvider, createTheme } from '@mui/material'
 import type { AppProps } from 'next/app'
-import 'tailwindcss/tailwind.css'
+import 'tailwindcss/base.css'
+import 'tailwindcss/components.css'
+import 'tailwindcss/utilities.css'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const heroSectionStyle = {
