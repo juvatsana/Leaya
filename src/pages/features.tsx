@@ -1,5 +1,6 @@
 import CardFeature from '@/components/CardFeature/CardFeature'
 import { Grid } from '@mui/material'
+import Link from 'next/link'
 
 const features = () => {
   const features = [
@@ -7,26 +8,31 @@ const features = () => {
       mediaPath: 'assets/featuresPictures/feature1.png',
       mediaTitle: 'La présentation vidéo',
       title: 'La présentation vidéo',
+      url: 'feature_video_presentation',
     },
     {
       mediaPath: 'assets/featuresPictures/feature2.png',
       mediaTitle: 'La recherche avancée',
       title: 'La recherche avancée',
+      url: 'feature_advanced_search',
     },
     {
       mediaPath: 'assets/featuresPictures/feature3.png',
       mediaTitle: 'La messagerie instantanée',
       title: 'La messagerie instantanée',
+      url: 'feature_instant_messaging',
     },
     {
       mediaPath: 'assets/featuresPictures/feature4.png',
       mediaTitle: 'Le système de Match',
       title: 'Le système de Match',
+      url: 'feature_matching_system',
     },
     {
       mediaPath: 'assets/featuresPictures/feature5.png',
       mediaTitle: 'Les notifications et alertes',
       title: 'Les notifications et alertes',
+      url: 'feature_notifications',
     },
   ]
 
@@ -70,7 +76,9 @@ const features = () => {
           justifyContent="center"
         >
           {features.map((feature, key) => (
-            <CardFeature key={key} {...feature} />
+            <Link href={feature.url}>
+              <CardFeature key={key} {...feature} />
+            </Link>
           ))}
         </Grid>
       </Grid>
