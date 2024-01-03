@@ -1,21 +1,27 @@
-import React from 'react'
 import { Grid } from '@mui/material'
 import Image from 'next/image'
 
-const feature_video_presentation = () => {
+const FeatureInstantMessaging = () => {
   return (
-    <Grid container style={{ justifyContent: 'center', color: 'white'}} alignItems="center" justifyContent="center" className='p-0 py-10 m-0 overflow-hidden' height="100%">
-        <Grid item sm={12} md={6} className="relative">
-            <Image 
-            className='relative -translate-x-24'
-            src="/assets/featuresPictures/feature3.png"
-            alt="La messagerie instantanée"
-            width={1000}
-            height={676}
-            style={{borderRadius: "97px" }}
-            />
-        </Grid>
-        <Grid
+    <Grid
+      container
+      style={{ justifyContent: 'center', color: 'white' }}
+      alignItems="center"
+      justifyContent="center"
+      className="p-0 py-10 m-0 overflow-hidden"
+      height="100%"
+    >
+      <Grid item sm={12} md={6} className="relative">
+        <Image
+          className="relative -translate-x-24"
+          src="/assets/featuresPictures/feature3.png"
+          alt="La messagerie instantanée"
+          width={1000}
+          height={676}
+          style={{ borderRadius: '97px' }}
+        />
+      </Grid>
+      <Grid
         item
         sm={12}
         md={6}
@@ -64,4 +70,4 @@ const feature_video_presentation = () => {
   )
 }
 
-export default feature_video_presentation
+export default FeatureInstantMessaging

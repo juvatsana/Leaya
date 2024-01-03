@@ -1,11 +1,10 @@
-import { Button, Grid, useTheme } from '@mui/material'
+import { Button, Grid } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CSSProperties } from 'react'
 import { useForm } from 'react-hook-form'
 
-export default function contact() {
-  const theme = useTheme()
+export default function Contact() {
   const { register, handleSubmit } = useForm()
   const onSubmit = (data: any) => console.log(data)
 

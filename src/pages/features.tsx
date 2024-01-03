@@ -2,7 +2,7 @@ import CardFeature from '@/components/CardFeature/CardFeature'
 import { Grid } from '@mui/material'
 import Link from 'next/link'
 
-const features = () => {
+const Features = () => {
   const features = [
     {
       mediaPath: 'assets/featuresPictures/feature1.png',
@@ -76,7 +76,7 @@ const features = () => {
           justifyContent="center"
         >
           {features.map((feature, key) => (
-            <Link href={feature.url}>
+            <Link href={feature.url} key={key}>
               <CardFeature key={key} {...feature} />
             </Link>
           ))}
@@ -86,4 +86,4 @@ const features = () => {
   )
 }
 
-export default features
+export default Features
