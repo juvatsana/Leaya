@@ -4,16 +4,16 @@ const Responsable = () => {
   return (
     <Grid
       container
-      style={{ justifyContent: 'center', color: 'white' }}
+      style={{ justifyContent: 'center', color: 'white', fontSize:'22px' }}
       alignItems="center"
       justifyContent="center"
-      className="p-0  py-10 m-0 overflow-hidden"
+      className="p-0 m-0 overflow-hidden"
     >
       <Grid
         item
         sm={12}
-        md={6}
-        className="relative flex-col text-justify p-10 md:text-2xl "
+        md={10}
+        className="relative flex-col text-justify md:text-2xl "
       >
         <h1
           style={{
@@ -29,7 +29,7 @@ const Responsable = () => {
           <span style={{ color: '#B18F40' }}>LEAYA ELITE</span>, UNE PLATEFORME
           RESPONSABLE
         </h1>
-        <p>
+        <p >
           <span style={{ color: '#B18F40' }}>LEAYA ELITE</span> entend
           construire une relation de confiance avec les différentes parties
           prenantes et de favoriser un environnement en ligne plus sain et plus
