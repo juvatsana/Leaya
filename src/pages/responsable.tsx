@@ -29,7 +29,7 @@ const Responsable = () => {
           <span style={{ color: '#B18F40' }}>LEAYA ELITE</span>, UNE PLATEFORME
           RESPONSABLE
         </h1>
-        <p >
+        <p>
           <span style={{ color: '#B18F40' }}>LEAYA ELITE</span> entend
           construire une relation de confiance avec les différentes parties
           prenantes et de favoriser un environnement en ligne plus sain et plus

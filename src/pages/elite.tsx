@@ -21,6 +21,7 @@ const Elite = () => {
           alt="Une main tenant un smartphone utilisant l'application Leaya"
           width={534}
           height={850}
+          style={{height: '75vh', width: 'auto'}}
         />
       </Grid>
       <Grid
