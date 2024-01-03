@@ -18,8 +18,9 @@ const menuItems = [
     label: 'A propos de nous',
     file: 'about',
     subMenu: [
-      { label: 'Une plateforme responsable', path: 'about/reponsable' },
-      { label: "Connecter l'Elite Africaine", path: 'about/elite' },
+      { label: 'A propos de nous', file: 'about' },
+      { label: 'Une plateforme responsable', file: 'reponsable' },
+      { label: "Connecter l'Elite Africaine", file: 'elite-africaine' },
     ],
   },
   {
@@ -44,45 +45,38 @@ const menuItems = [
   },
 ]
 
-const pages = [
+const menuMobile = [
   { file: 'about', label: 'A propos de nous' },
+  { file: 'reponsable', label: 'Une plateforme responsable' },
+  { file: 'elite-africaine', label: "Connecter l'Elite Africaine" },
   { file: 'features', label: 'Fonctionnalités' },
   { file: 'security', label: 'Sécurité et confidentialité' },
   { file: 'elite', label: 'Rejoindre l’élite' },
   { file: 'contact', label: 'Contacts' },
 ]
 
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
-
 export default function Navbar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
+  const [anchorElMenu, setAnchorElMenu] = React.useState<null | HTMLElement>(
     null
   )
+  const [anchorElSubMenu, setAnchorElSubMenu] =
+    React.useState<null | HTMLElement>(null)
+  const isSubMenuOpen = anchorElSubMenu !== null
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget)
-  }
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget)
-  }
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null)
+  const handleOpenMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorElMenu(event.currentTarget)
   }
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null)
+  const handleCloseMenu = () => {
+    setAnchorElMenu(null)
   }
 
-  const [anchorEl, setAnchorEl] = React.useState(null)
-
-  const handleMenuOpen = (event: any) => {
-    setAnchorEl(event.currentTarget)
+  const handleOpenSubMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorElSubMenu(event.currentTarget)
   }
 
-  const handleMenuClose = () => {
-    setAnchorEl(null)
+  const handleCloseSubMenu = () => {
+    setAnchorElSubMenu(null)
   }
 
   return (
@@ -105,14 +99,14 @@ export default function Navbar() {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
+              onClick={handleOpenMenu}
               color="inherit"
             >
               <MenuIcon />
             </IconButton>
             <Menu
               id="menu-appbar"
-              anchorEl={anchorElNav}
+              anchorEl={anchorElMenu}
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'left',
@@ -122,19 +116,19 @@ export default function Navbar() {
                 vertical: 'top',
                 horizontal: 'left',
               }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+              open={Boolean(anchorElMenu)}
+              onClose={handleCloseMenu}
               sx={{
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {menuItems.map((page) => (
+              {menuMobile.map((page) => (
                 <Link
                   key={page.label}
                   href={page.file}
                   style={{ textDecoration: 'none' }}
                 >
-                  <MenuItem key={page.label} onClick={handleCloseNavMenu}>
+                  <MenuItem key={page.label} onClick={handleCloseMenu}>
                     <Typography textAlign="center">{page.label}</Typography>
                   </MenuItem>
                 </Link>
@@ -149,9 +143,9 @@ export default function Navbar() {
                   <div>
                     <Button
                       color="inherit"
-                      onClick={handleMenuOpen}
-                      onMouseOver={handleMenuOpen}
-                      onMouseOut={handleMenuClose}
+                      onClick={handleOpenSubMenu}
+                      onMouseOver={handleOpenSubMenu}
+                      onMouseOut={handleCloseSubMenu}
                       style={{ textTransform: 'initial' }}
                       sx={{
                         my: 2,
@@ -164,19 +158,24 @@ export default function Navbar() {
                       }}
                     >
                       {menuItem.label}
-                      TODO
                     </Button>
                     <Menu
-                      anchorEl={anchorEl}
-                      open={Boolean(anchorEl)}
-                      onClose={handleMenuClose}
+                      anchorEl={anchorElSubMenu}
+                      open={isSubMenuOpen}
+                      onClose={handleCloseSubMenu}
                     >
                       {menuItem.subMenu.map((subMenuItem) => (
-                        <MenuItem key={subMenuItem.label}>
-                          <Typography color="inherit">
-                            {subMenuItem.label}
-                          </Typography>
-                        </MenuItem>
+                        <Link
+                          key={subMenuItem.label}
+                          href={subMenuItem.file}
+                          style={{ textDecoration: 'none' }}
+                        >
+                          <MenuItem key={subMenuItem.label}>
+                            <Typography color="inherit">
+                              {subMenuItem.label}
+                            </Typography>
+                          </MenuItem>
+                        </Link>
                       ))}
                     </Menu>
                   </div>
@@ -188,7 +187,7 @@ export default function Navbar() {
                   >
                     <Button
                       key={menuItem.label}
-                      onClick={handleCloseNavMenu}
+                      onClick={handleCloseMenu}
                       style={{ textTransform: 'initial' }}
                       sx={{
                         my: 2,
@@ -206,33 +205,9 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-            {/* {menuItems.map((page) => (
-              <Link
-                key={page.label}
-                href={page.file}
-                style={{ textDecoration: 'none' }}
-              >
-                <Button
-                  key={page.label}
-                  onClick={handleCloseNavMenu}
-                  style={{ textTransform: 'initial' }}
-                  sx={{
-                    my: 2,
-                    mx: 2,
-                    color: 'white',
-                    display: 'block',
-                    fontStyle: 'normal',
-                    listStyle: 'none',
-                    textTransform: 'none',
-                  }}
-                >
-                  {page.label}
-                </Button>
-              </Link>
-            ))} */}
             <Link href="#" style={{ textDecoration: 'none' }}>
               <Button
-                onClick={handleCloseNavMenu}
+                onClick={handleCloseMenu}
                 style={{
                   backgroundColor: '#B18F40',
                   borderRadius: '50px',
@@ -251,30 +226,6 @@ export default function Navbar() {
                 Télécharger l'application
               </Button>
             </Link>
-          </Box>
-          <Box sx={{ flexGrow: 0 }}>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
           </Box>
         </Toolbar>
       </Container>
