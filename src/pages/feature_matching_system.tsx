@@ -14,7 +14,7 @@ const FeatureVideoPresentation = () => {
       <Grid item sm={12} md={6} className="relative">
         <Image
           className="relative -translate-x-24"
-          src="/assets/featuresPictures/feature4.png"
+          src="/assets/featuresPictures/feature4_height700.png"
           alt="Le système de Match"
           width={1000}
           height={676}

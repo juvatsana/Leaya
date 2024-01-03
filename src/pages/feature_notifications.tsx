@@ -8,7 +8,7 @@ const feature_video_presentation = () => {
         <Grid item sm={12} md={6} className="relative">
             <Image 
             className='relative -translate-x-24'
-            src="/assets/featuresPictures/feature5.png"
+            src="/assets/featuresPictures/feature5_height700.png"
             alt="Les notifications et alertes"
             width={1000}
             height={676}

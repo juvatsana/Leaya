@@ -14,7 +14,7 @@ const FeatureVideoPresentation = () => {
       <Grid item sm={12} md={6} className="relative">
         <Image
           className="relative -translate-x-24"
-          src="/assets/featuresPictures/feature1.png"
+          src="/assets/featuresPictures/feature1_height700.png"
           alt="illustration d'une personne utilisant l'application Leaya sur smartphone"
           width={1000}
           height={676}

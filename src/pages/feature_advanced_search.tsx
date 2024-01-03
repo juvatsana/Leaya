@@ -14,7 +14,7 @@ const FeatureAdvancedSearch = () => {
       <Grid item sm={12} md={6} className="relative">
         <Image
           className="relative -translate-x-24"
-          src="/assets/featuresPictures/feature2.png"
+          src="/assets/featuresPictures/feature2_height700.png"
           alt="La recherche avancée"
           width={1000}
           height={676}
