@@ -19,7 +19,7 @@ const menuItems = [
     file: 'about',
     subMenu: [
       { label: 'A propos de nous', file: 'about' },
-      { label: 'Une plateforme responsable', file: 'reponsable' },
+      { label: 'Une plateforme responsable', file: 'responsable' },
       { label: "Connecter l'Elite Africaine", file: 'elite-africaine' },
     ],
   },
