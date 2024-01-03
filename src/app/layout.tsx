@@ -10,7 +10,7 @@ const raleway = Raleway({
 
 export const metadata: Metadata = {
   title: 'Leaya',
-  description: '',
+  description: 'LEAYA ELITE est une application dédiée aux rencontres et au réseautage en Afrique.',
 }
 
 export default function RootLayout({
