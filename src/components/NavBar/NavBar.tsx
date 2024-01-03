@@ -171,7 +171,10 @@ export default function Navbar() {
                             textDecoration: 'none',
                           }}
                         >
-                          <MenuItem key={subMenuItem.label}>
+                          <MenuItem
+                            key={subMenuItem.label}
+                            onClick={handleCloseSubMenu}
+                          >
                             <Typography color="inherit">
                               {subMenuItem.label}
                             </Typography>
