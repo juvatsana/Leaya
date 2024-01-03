@@ -31,12 +31,12 @@ const Security = () => {
           style={{
             position: 'relative',
             color: 'white',
-            fontSize: '48px',
             fontWeight: '600',
             padding: '2rem',
             lineHeight: '3.5rem',
             textAlign: 'center',
           }}
+          className='lg:text-5xl md:text-4xl'
         >
           SECURITE ET CONFIDENTIALITE
         </h1>
