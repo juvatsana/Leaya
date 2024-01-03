@@ -21,7 +21,7 @@ const Elite = () => {
           alt="Une main tenant un smartphone utilisant l'application Leaya"
           width={534}
           height={850}
-          style={{height: '75vh', width: 'auto'}}
+          style={{height: '80vh', width: 'auto'}}
         />
       </Grid>
       <Grid
@@ -29,8 +29,8 @@ const Elite = () => {
         sm={12}
         md={12}
         lg={6}
-        className="relative flex-col text-justify md:text-2xl"
-        style={{fontSize: "24px", padding: '5%'}}
+        className="relative flex-col text-justify md:text-2xl px-10"
+        // style={{fontSize: "24px", padding: '5%'}}
       >
         <h1
           style={{
@@ -46,7 +46,7 @@ const Elite = () => {
           COMMENT REJOINDRE <span style={{ color: '#B18F40' }}>LEAYA ELITE</span>
         </h1>
         <p>
-          <span style={{ color: '#B18F40' }}>LEAYA ELITE</span> 
+          <span style={{ color: '#B18F40' }}>LEAYA ELITE </span> 
           est une application de rencontres payante accessible 
           sur les plateformes App Store et Play Store.
         </p>
