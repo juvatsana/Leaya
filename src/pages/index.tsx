@@ -47,7 +47,7 @@ export default function App() {
     <Grid container style={{ justifyContent: 'center' }}>
       <Grid item sm={12} md={6} className="relative">
         <h1 style={styleTitle}>
-          <span style={{ color: '#B18F40' }}>Leaya Elite</span>, la technologue
+          <span style={{ color: '#B18F40' }}>Leaya Elite</span>, la technologie
           au coeur de l'excellence
         </h1>
         <Link href="#">
