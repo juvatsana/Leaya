@@ -3,10 +3,24 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CSSProperties } from 'react'
 import { useForm } from 'react-hook-form'
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react'
 
 export default function Contact() {
   const { register, handleSubmit } = useForm()
-  const onSubmit = (data: any) => console.log(data)
+  const form = useRef();
+
+  const onSubmit = (data: any) => {
+    console.log(data)
+    console.log(form.current)
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+
+  }
 
   const styleLink: CSSProperties = {
     display: 'flex',
@@ -39,7 +53,7 @@ export default function Contact() {
         <span style={{ fontWeight: 'bold', color: '#B18F40' }}>
           Besoin d’aide? Nous sommes là pour vous
         </span>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form ref={form} onSubmit={handleSubmit(onSubmit)}>
           <Grid container style={{ justifyContent: 'center' }}>
             <Grid
               item
@@ -60,7 +74,6 @@ export default function Contact() {
               <input
                 style={{
                   padding: '10px',
-                  border: '1px solid',
                   borderRadius: '8px',
                   backgroundColor: '#B18F40',
                   width: '70%',
@@ -89,7 +102,6 @@ export default function Contact() {
               <input
                 style={{
                   padding: '10px',
-                  border: '1px solid',
                   borderRadius: '8px',
                   backgroundColor: '#B18F40',
                   width: '70%',
@@ -124,7 +136,6 @@ export default function Contact() {
               <textarea
                 style={{
                   padding: '10px',
-                  border: '1px solid',
                   borderRadius: '8px',
                   backgroundColor: '#B18F40',
                   width: '70%',
