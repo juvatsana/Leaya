@@ -8,7 +8,7 @@ const Elite = () => {
       style={{ justifyContent: 'center', color: 'white' }}
       alignItems="center"
       justifyContent="center"
-      className="p-0  py-10 m-0 overflow-hidden"
+      className="p-0 m-0 overflow-hidden"
     >
       <Grid item sm={12} md={6} className="relative">
         <Image
@@ -17,7 +17,7 @@ const Elite = () => {
           alt="illustration d'une personne utilisant l'application Leaya sur smartphone"
           width={1000}
           height={676}
-          style={{ borderRadius: '97px' }}
+          style={{ borderRadius: '97px',}}
         />
       </Grid>
       <Grid

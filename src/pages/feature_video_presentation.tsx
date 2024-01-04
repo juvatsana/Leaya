@@ -5,7 +5,7 @@ const FeatureVideoPresentation = () => {
   return (
     <Grid
       container
-      style={{ justifyContent: 'center', color: 'white' }}
+      style={{ justifyContent: 'center', color: 'white', fontSize: '24px' }}
       alignItems="center"
       justifyContent="center"
       className="p-0 py-10 m-0 overflow-hidden"

@@ -4,10 +4,10 @@ const Responsable = () => {
   return (
     <Grid
       container
-      style={{ justifyContent: 'center', color: 'white', fontSize:'22px' }}
+      style={{ color: 'white', fontSize:'22px' }}
       alignItems="center"
       justifyContent="center"
-      className="p-0 m-0 overflow-hidden"
+      className="p-12 md:p-0 m-0 overflow-hidden"
     >
       <Grid
         item

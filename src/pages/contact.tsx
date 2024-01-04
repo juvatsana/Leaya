@@ -24,7 +24,7 @@ export default function Contact() {
   }
 
   return (
-    <Grid container style={{ justifyContent: 'center' }}>
+    <Grid container style={{ justifyContent: 'center', fontSize: '24px' }}>
       <Grid item sm={0} md={6}></Grid>
       <Grid item xs={12} md={6} style={{ paddingLeft: '1rem' }}>
         <h1
@@ -59,11 +59,12 @@ export default function Contact() {
             <Grid item xs={12}>
               <input
                 style={{
-                  padding: '1px',
+                  padding: '10px',
                   border: '1px solid',
                   borderRadius: '8px',
                   backgroundColor: '#B18F40',
                   width: '70%',
+                  color: "white",
                 }}
                 type="text"
                 id="nom"
@@ -87,11 +88,12 @@ export default function Contact() {
             <Grid item xs={12}>
               <input
                 style={{
-                  padding: '1px',
+                  padding: '10px',
                   border: '1px solid',
                   borderRadius: '8px',
                   backgroundColor: '#B18F40',
                   width: '70%',
+                  color: "white",
                 }}
                 className="placeholder-white text-sm"
                 type="email"
@@ -121,12 +123,13 @@ export default function Contact() {
             <Grid item xs={12}>
               <textarea
                 style={{
-                  padding: '1px',
+                  padding: '10px',
                   border: '1px solid',
                   borderRadius: '8px',
                   backgroundColor: '#B18F40',
                   width: '70%',
                   height: '110px',
+                  color: "white",
                 }}
                 className="placeholder-white text-sm"
                 placeholder="Veuillez entrer votre message"

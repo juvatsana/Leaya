@@ -4,7 +4,14 @@ import Image from 'next/image'
 
 const feature_video_presentation = () => {
   return (
-    <Grid container style={{ justifyContent: 'center', color: 'white'}} alignItems="center" justifyContent="center" className='p-0 py-10 m-0 overflow-hidden' height="100%">
+    <Grid 
+    container 
+    alignItems="center" 
+    justifyContent="center" 
+    className='p-0 py-10 m-0 overflow-hidden' 
+    height="100%"
+    style={{ justifyContent: 'center', color: 'white', fontSize: '24px'}} 
+    >
         <Grid item sm={12} md={6} className="relative">
             <Image 
             className='relative -translate-x-24'

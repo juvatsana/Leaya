@@ -76,7 +76,7 @@ const Features = () => {
           justifyContent="center"
         >
           {features.map((feature, key) => (
-            <Link href={feature.url} key={key}>
+            <Link href={feature.url} key={key} className='py-2 md:py-0'>
               <CardFeature key={key} {...feature} />
             </Link>
           ))}
