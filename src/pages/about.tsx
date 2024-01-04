@@ -45,6 +45,7 @@ const about = () => {
           vise à connecter les communautés et les amoureux du continent à
           travers sa plateforme mobile.
           <span style={{ color: '#B18F40' }}>
+            {' '}
             L'Afrique, en tant que terre d'opportunités, est au cœur de notre
             initiative.
           </span>

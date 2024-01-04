@@ -1,28 +1,27 @@
-import React from 'react'
 import { Grid } from '@mui/material'
 import Image from 'next/image'
 
 const feature_video_presentation = () => {
   return (
-    <Grid 
-    container 
-    alignItems="center" 
-    justifyContent="center" 
-    className='p-0 py-10 m-0 overflow-hidden' 
-    height="100%"
-    style={{ justifyContent: 'center', color: 'white', fontSize: '24px'}} 
+    <Grid
+      container
+      alignItems="center"
+      justifyContent="center"
+      className="p-0 py-10 m-0 overflow-hidden"
+      height="100%"
+      style={{ justifyContent: 'center', color: 'white', fontSize: '24px' }}
     >
-        <Grid item sm={12} md={6} className="relative">
-            <Image 
-            className='relative -translate-x-24'
-            src="/assets/featuresPictures/feature5_height700.png"
-            alt="Les notifications et alertes"
-            width={1000}
-            height={676}
-            style={{borderRadius: "97px" }}
-            />
-        </Grid>
-        <Grid
+      <Grid item sm={12} md={6} className="relative">
+        <Image
+          className="relative -translate-x-24"
+          src="/assets/featuresPictures/feature5_height700.png"
+          alt="Les notifications et alertes"
+          width={1000}
+          height={676}
+          style={{ borderRadius: '97px' }}
+        />
+      </Grid>
+      <Grid
         item
         sm={12}
         md={6}
@@ -47,6 +46,7 @@ const feature_video_presentation = () => {
           vise à connecter les communautés et les amoureux du continent à
           travers sa plateforme mobile.
           <span style={{ color: '#B18F40' }}>
+            {' '}
             L'Afrique, en tant que terre d'opportunités, est au cœur de notre
             initiative.
           </span>

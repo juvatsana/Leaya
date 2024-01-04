@@ -5,7 +5,7 @@ const FeatureVideoPresentation = () => {
   return (
     <Grid
       container
-      style={{ justifyContent: 'center', color: 'white', fontSize: '24px'}}
+      style={{ justifyContent: 'center', color: 'white', fontSize: '24px' }}
       alignItems="center"
       justifyContent="center"
       className="p-0 py-10 m-0 overflow-hidden"
@@ -46,6 +46,7 @@ const FeatureVideoPresentation = () => {
           vise à connecter les communautés et les amoureux du continent à
           travers sa plateforme mobile.
           <span style={{ color: '#B18F40' }}>
+            {' '}
             L'Afrique, en tant que terre d'opportunités, est au cœur de notre
             initiative.
           </span>
