@@ -44,6 +44,7 @@ const Features = () => {
         alignItems="start"
         justifyContent="center"
         style={{ color: 'white', fontSize: '24px' }}
+        className='font-thin'
       >
         <Grid item xs={11}>
           <h1
@@ -61,10 +62,10 @@ const Features = () => {
           </h1>
           <p style={{ fontSize: '24px', paddingBottom: '2rem' }}>
             L'une des caractéristiques uniques de{' '}
-            <span style={{ color: '#B18F40' }}>LEAYA ELITE</span> est son
+            <span style={{ color: 'transparent', backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', backgroundClip: 'text'  }}>LEAYA ELITE</span> est son
             algorithme sophistiqué qui permet de trouver des personnes
             compatibles en fonction des données collectées. Avec{' '}
-            <span style={{ color: '#B18F40' }}>LEAYA ELITE</span>, les
+            <span style={{ color: 'transparent', backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', backgroundClip: 'text'  }}>LEAYA ELITE</span>, les
             utilisateurs bénéficieront de fonctionnalités pratiques telles que :
           </p>
         </Grid>

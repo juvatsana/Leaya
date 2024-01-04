@@ -47,13 +47,21 @@ export default function App() {
     <Grid container style={{ justifyContent: 'center' }}>
       <Grid item sm={12} md={6} className="relative">
         <h1 style={styleTitle}>
-          <span style={{ color: '#B18F40' }}>Leaya Elite</span>, la technologie
+          <span 
+          style={{ 
+            color: 'transparent',
+            backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            backgroundClip: 'text'
+            }}>
+              Leaya Elite
+          </span>
+          , la technologie
           au coeur de l'excellence
         </h1>
-        <Link href="#">
+        <Link href="https://apps.apple.com/fr/app/leaya-elite/id6474127173">
           <Image
             className={styleDownload}
-            src="./assets/download_app.svg"
+            src="./assets/download_app2.svg"
             alt="lien de téléchargement"
             width="600"
             height="600"

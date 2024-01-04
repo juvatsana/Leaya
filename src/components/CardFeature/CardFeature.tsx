@@ -9,9 +9,9 @@ const CardFeature = (props: any) => {
         sx={{ maxWidth: 394, maxHeight: 289, width: 401, height: 289, transition: '.3s'}} 
         style={{
             borderRadius: "71px 71px 0 0", 
-            border: '#B18F40 6px solid', 
+            border: '#d3bb67 3px solid', 
             borderCollapse: 'collapse', 
-            backgroundColor: '#B18F40', 
+            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', 
             margin: '5px'
         }}>
             <CardMedia
@@ -20,7 +20,13 @@ const CardFeature = (props: any) => {
             image={props.mediaPath}
             title={props.mediaTitle}
             />
-            <CardContent style={{maxHeight: '59px', color: "white", backgroundColor: '#B18F40', textAlign: 'center'}}>
+            <CardContent 
+            style={{
+                maxHeight: '59px', 
+                color: "white", 
+                background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', 
+                textAlign: 'center'
+            }}>
                 <Typography gutterBottom variant="h2" component="div" style={{fontSize: 'x-large', fontWeight: 'bold'}}>
                     {props.title}
                 </Typography>

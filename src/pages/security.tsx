@@ -8,7 +8,7 @@ const Security = () => {
       style={{ justifyContent: 'center', color: 'white' }}
       alignItems="center"
       justifyContent="center"
-      className="sm:p-5 m-0 overflow-hidden"
+      className="sm:p-5 m-0 overflow-hidden font-thin"
       height="100%"
     >
       <Grid item sm={12} md={6} className="relative">
@@ -48,7 +48,13 @@ const Security = () => {
             paddingBottom: '2rem' 
           }}>
           <span style={{ color: '#B18F40' }}>
-            LEAYA ELITE garantit la sécurité et la confidentialité auprès de ces
+            <span
+            style={{
+              color: 'transparent', 
+              backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', 
+              backgroundClip: 'text',
+            }}
+            >LEAYA ELITE</span> garantit la sécurité et la confidentialité auprès de ces
             utilisateurs afin d’offrir une expérience fiable et agréable.
           </span>
           <br />

@@ -57,7 +57,12 @@ export default function Contact() {
         >
           Formulaire de contact
         </h1>
-        <span style={{ fontWeight: 'bold', color: '#B18F40' }}>
+        <span style={{ 
+          fontWeight: 'bold', 
+          color: 'transparent', 
+          backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', 
+          backgroundClip: 'text',
+        }}>
           Besoin d’aide? Nous sommes là pour vous
         </span>
         <form ref={form} onSubmit={handleSubmit(onSubmit)}>
@@ -70,7 +75,9 @@ export default function Contact() {
               <label
                 style={{
                   fontWeight: 'bold',
-                  color: '#B18F40',
+                  color: 'transparent', 
+                  backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', 
+                  backgroundClip: 'text',
                 }}
                 htmlFor="nom"
               >
@@ -82,7 +89,7 @@ export default function Contact() {
                 style={{
                   padding: '10px',
                   borderRadius: '8px',
-                  backgroundColor: '#B18F40',
+                  background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
                   width: '70%',
                   color: 'white',
                 }}
@@ -99,7 +106,12 @@ export default function Contact() {
               style={{ marginTop: '10px', marginBottom: '10px' }}
             >
               <label
-                style={{ fontWeight: 'bold', color: '#B18F40' }}
+                style={{ 
+                  fontWeight: 'bold', 
+                  color: 'transparent', 
+                  backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', 
+                  backgroundClip: 'text', 
+                }}
                 htmlFor="email"
               >
                 Votre e-mail
@@ -110,7 +122,7 @@ export default function Contact() {
                 style={{
                   padding: '10px',
                   borderRadius: '8px',
-                  backgroundColor: '#B18F40',
+                  background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
                   width: '70%',
                   color: 'white',
                 }}
@@ -134,7 +146,12 @@ export default function Contact() {
             >
               <label
                 htmlFor="message"
-                style={{ fontWeight: 'bold', color: '#B18F40' }}
+                style={{ 
+                  fontWeight: 'bold', 
+                  color: 'transparent', 
+                  backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', 
+                  backgroundClip: 'text', 
+                }}
               >
                 Votre message
               </label>
@@ -144,7 +161,7 @@ export default function Contact() {
                 style={{
                   padding: '10px',
                   borderRadius: '8px',
-                  backgroundColor: '#B18F40',
+                  background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
                   width: '70%',
                   height: '110px',
                   color: 'white',
@@ -158,7 +175,10 @@ export default function Contact() {
             <Grid item xs={12} style={{ marginTop: '20px' }}>
               <Button
                 size="small"
-                style={{ backgroundColor: '#B18F40', color: 'white' }}
+                style={{ 
+                  background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', 
+                  color: 'white' 
+                }}
                 type="submit"
                 variant="outlined"
               >
@@ -170,8 +190,8 @@ export default function Contact() {
                 <Image
                   src="./assets/email_gold.svg"
                   alt="Email"
-                  width="20"
-                  height="20"
+                  width="50"
+                  height="50"
                 />
               </Link>
             </Grid>
@@ -183,8 +203,8 @@ export default function Contact() {
                 <Image
                   src="./assets/instagram_gold.svg"
                   alt="Instagram"
-                  width="20"
-                  height="20"
+                  width="50"
+                  height="50"
                 />
               </Link>
             </Grid>
@@ -196,8 +216,8 @@ export default function Contact() {
                 <Image
                   src="./assets/facebook_gold.svg"
                   alt="Facebook"
-                  width="20"
-                  height="20"
+                  width="50"
+                  height="50"
                 />
               </Link>
             </Grid>

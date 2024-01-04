@@ -7,7 +7,7 @@ const Responsable = () => {
       style={{ color: 'white', fontSize:'22px' }}
       alignItems="center"
       justifyContent="center"
-      className="p-12 md:p-0 m-0 overflow-hidden"
+      className="p-12 md:p-0 m-0 overflow-hidden font-thin"
     >
       <Grid
         item
@@ -26,12 +26,23 @@ const Responsable = () => {
             textAlign: 'center',
           }}
         >
-          <span style={{ color: '#B18F40' }}>LEAYA ELITE</span>, UNE PLATEFORME
+          <span style={{ 
+            color: 'transparent',
+            backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            backgroundClip: 'text' }}>
+              LEAYA ELITE
+          </span>
+          , UNE PLATEFORME
           RESPONSABLE
         </h1>
         <p>
-          <span style={{ color: '#B18F40' }}>LEAYA ELITE</span> entend
-          construire une relation de confiance avec les différentes parties
+          <span style={{ 
+            color: 'transparent',
+            backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            backgroundClip: 'text' 
+          }}>
+            LEAYA ELITE
+          </span> entend construire une relation de confiance avec les différentes parties
           prenantes et de favoriser un environnement en ligne plus sain et plus
           éthique. C’est ainsi que nous accordons une importance capitale aux
           points ci-dessous :
@@ -39,7 +50,7 @@ const Responsable = () => {
         <br />
         <div
           style={{
-            backgroundColor: '#B18F40',
+            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -53,7 +64,7 @@ const Responsable = () => {
         <br />
         <div
           style={{
-            backgroundColor: '#B18F40',
+            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -68,7 +79,7 @@ const Responsable = () => {
         <br />
         <div
           style={{
-            backgroundColor: '#B18F40',
+            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -88,7 +99,7 @@ const Responsable = () => {
         <br />
         <div
           style={{
-            backgroundColor: '#B18F40',
+            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
             borderRadius: '35px',
             padding: '15px',
           }}

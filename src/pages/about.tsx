@@ -8,7 +8,7 @@ const about = () => {
       style={{ justifyContent: 'center', color: 'white' }}
       alignItems="center"
       justifyContent="center"
-      className="p-0 py-10 m-0 overflow-hidden"
+      className="p-0 py-10 m-0 overflow-hidden font-thin"
     >
       <Grid item sm={12} md={6} className="relative">
         <Image
@@ -24,7 +24,7 @@ const about = () => {
         item
         sm={12}
         md={6}
-        className="relative flex-col text-justify p-10 md:text-2xl "
+        className="relative flex-col text-justify p-10 md:text-2xl font-thin"
       >
         <h1
           style={{
@@ -40,13 +40,19 @@ const about = () => {
           A PROPOS DE NOUS
         </h1>
         <p>
-          <span style={{ color: '#B18F40' }}>LEAYA ELITE</span> est une
+        <span 
+          style={{ 
+            color: 'transparent',
+            backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            backgroundClip: 'text'
+            }}>
+              Leaya Elite
+          </span> est une
           application dédiée aux rencontres et au réseautage en Afrique. Elle
           vise à connecter les communautés et les amoureux du continent à
           travers sa plateforme mobile.
           <span style={{ color: '#B18F40' }}>
-            {' '}
-            L'Afrique, en tant que terre d'opportunités, est au cœur de notre
+            {' '}L'Afrique, en tant que terre d'opportunités, est au cœur de notre
             initiative.
           </span>
         </p>

@@ -8,14 +8,14 @@ const Elite = () => {
       style={{ justifyContent: 'center', color: 'white' }}
       alignItems="center"
       justifyContent="center"
-      className="p-0 m-0 overflow-hidden"
+      className="p-0 m-0 overflow-hidden font-thin"
     >
       <Grid item sm={12} md={6} className="relative">
         <Image
           className="relative -translate-x-20"
           src="/assets/elite.png"
           alt="illustration d'une personne utilisant l'application Leaya sur smartphone"
-          width={1000}
+          width={700}
           height={676}
           style={{ borderRadius: '97px',}}
         />
@@ -40,7 +40,13 @@ const Elite = () => {
           CONNECTER L’ELITE AFRICAINE
         </h1>
         <p>
-          <span style={{ color: '#B18F40' }}>LEAYA ELITE</span> est
+          <span style={{ 
+            color: 'transparent',
+            backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            backgroundClip: 'text' 
+          }}>
+            LEAYA ELITE
+          </span> est
           principalement destinée aux professionnels qui cherchent à étendre
           leur réseau et à explorer de nouvelles opportunités, mais aussi à ceux
           qui cherchent l’amour. Les différentes cibles de la plateforme sont :
@@ -48,7 +54,7 @@ const Elite = () => {
         <br />
         <div
           style={{
-            backgroundColor: '#B18F40',
+            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -59,7 +65,7 @@ const Elite = () => {
         <br />
         <div
           style={{
-            backgroundColor: '#B18F40',
+            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -70,7 +76,7 @@ const Elite = () => {
         <br />
         <div
           style={{
-            backgroundColor: '#B18F40',
+            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -81,7 +87,7 @@ const Elite = () => {
         <br />
         <div
           style={{
-            backgroundColor: '#B18F40',
+            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
             borderRadius: '35px',
             padding: '15px',
           }}

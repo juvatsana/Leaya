@@ -8,7 +8,7 @@ const FeatureAdvancedSearch = () => {
       style={{ justifyContent: 'center', color: 'white', fontSize: '24px' }}
       alignItems="center"
       justifyContent="center"
-      className="p-0 py-10 m-0 overflow-hidden"
+      className="p-0 py-10 m-0 overflow-hidden font-thin"
       height="100%"
     >
       <Grid item sm={12} md={6} className="relative">
@@ -16,7 +16,7 @@ const FeatureAdvancedSearch = () => {
           className="relative -translate-x-24"
           src="/assets/featuresPictures/feature2_height700.png"
           alt="La recherche avancée"
-          width={1000}
+          width={800}
           height={676}
           style={{ borderRadius: '97px' }}
         />
@@ -41,12 +41,12 @@ const FeatureAdvancedSearch = () => {
           A PROPOS DE NOUS
         </h1>
         <p>
-          <span style={{ color: '#B18F40' }}>LEAYA ELITE</span> est une
+          <span style={{ color: 'transparent', backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', backgroundClip: 'text' }}>LEAYA ELITE</span> est une
           application dédiée aux rencontres et au réseautage en Afrique. Elle
           vise à connecter les communautés et les amoureux du continent à
           travers sa plateforme mobile.
           <span style={{ color: '#B18F40' }}>
-            L'Afrique, en tant que terre d'opportunités, est au cœur de notre
+            {' '} L'Afrique, en tant que terre d'opportunités, est au cœur de notre
             initiative.
           </span>
         </p>

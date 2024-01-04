@@ -6,13 +6,13 @@ import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Container from '@mui/material/Container'
 import IconButton from '@mui/material/IconButton'
-
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import Link from 'next/link'
 import * as React from 'react'
+
 
 const menuItems = [
   {
@@ -57,6 +57,7 @@ const menuMobile = [
 ]
 
 export default function Navbar() {
+
   const [anchorElMenu, setAnchorElMenu] = React.useState<null | HTMLElement>(
     null
   )
@@ -143,9 +144,10 @@ export default function Navbar() {
                 {menuItem.subMenu.length > 0 ? (
                   <div>
                     <Button
+                      className='sm:text-lg lg:text-xl'
                       color="inherit"
                       onClick={handleOpenSubMenu}
-                      style={{ textTransform: 'initial' }}
+                      style={{ textTransform: 'initial'}}
                       sx={{
                         my: 2,
                         mx: 2,
@@ -190,9 +192,10 @@ export default function Navbar() {
                     style={{ textDecoration: 'none' }}
                   >
                     <Button
+                      className='sm:text-lg lg:text-xl'
                       key={menuItem.label}
                       onClick={handleCloseMenu}
-                      style={{ textTransform: 'initial' }}
+                      style={{ textTransform: 'initial'}}
                       sx={{
                         my: 2,
                         mx: 2,
@@ -209,12 +212,14 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-            <Link href="#" style={{ textDecoration: 'none' }}>
+            <Link 
+            href="https://apps.apple.com/fr/app/leaya-elite/id6474127173" 
+            style={{ textDecoration: 'none' }}>
               <Button
                 onClick={handleCloseMenu}
                 style={{
-                  backgroundColor: '#B18F40',
-                  borderRadius: '50px',
+                  background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+                  borderRadius: '20px',
                   padding: '5px',
                 }}
                 sx={{
@@ -222,7 +227,7 @@ export default function Navbar() {
                   color: 'black',
                   display: 'block',
                   fontStyle: 'normal',
-                  backgroundColor: '#B18F40',
+                  background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
                   borderRadius: '15px',
                   textTransform: 'none',
                 }}

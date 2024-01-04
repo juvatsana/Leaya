@@ -18,7 +18,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       MuiList: {
         styleOverrides: {
           root: {
-            backgroundColor: '#B18F40',
+            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
             color: 'white',
           },
         },

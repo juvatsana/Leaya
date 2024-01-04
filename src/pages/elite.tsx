@@ -6,7 +6,7 @@ const Elite = () => {
     <Grid
       container
       style={{ color: 'white', fontSize: '24px'}}
-      className="p-0 m-0"
+      className="p-0 m-0 font-thin"
     >
       <Grid 
         item 
@@ -43,19 +43,30 @@ const Elite = () => {
             textAlign: 'center',
           }}
         >
-          COMMENT REJOINDRE <span style={{ color: '#B18F40' }}>LEAYA ELITE</span>
+          COMMENT REJOINDRE <span style={{ 
+            color: 'transparent',
+            backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            backgroundClip: 'text'  }}>
+              LEAYA ELITE
+            </span>
         </h1>
         <p>
-          <span style={{ color: '#B18F40' }}>LEAYA ELITE </span> 
-          est une application de rencontres payante accessible 
-          sur les plateformes App Store et Play Store.
+          <span 
+          style={{ 
+            color: 'transparent',
+            backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            backgroundClip: 'text' 
+          }}>
+            LEAYA ELITE 
+          </span> est une application de rencontres payante accessible 
+        sur les plateformes App Store et Play Store.
         </p>
         <br />
         <p>L'adhésion est conditionnée par :</p>
         <br />
         <div
           style={{
-            backgroundColor: '#B18F40',
+            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -65,7 +76,7 @@ const Elite = () => {
         <br />
         <div
           style={{
-            backgroundColor: '#B18F40',
+            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -75,7 +86,7 @@ const Elite = () => {
         <br />
         <div
           style={{
-            backgroundColor: '#B18F40',
+            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
             borderRadius: '35px',
             padding: '15px',
           }}
