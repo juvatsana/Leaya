@@ -24,7 +24,7 @@ const Elite = () => {
         item
         sm={12}
         md={6}
-        className="relative flex-col text-justify p-10 md:text-2xl "
+        className="relative flex-col  p-10 md:text-2xl "
       >
         <h1
           style={{
@@ -54,7 +54,7 @@ const Elite = () => {
           }}
         >
           <span style={{ fontWeight: 'bold' }}>Homme et femme d’influence</span>
-          : cadre d’entreprise, politicien, auteur, etc
+          <span> : cadre d’entreprise, politicien, auteur, etc</span>
         </div>
         <br />
         <div
@@ -64,8 +64,8 @@ const Elite = () => {
             padding: '15px',
           }}
         >
-          <span style={{ fontWeight: 'bold' }}>Homme et femme d’affaires</span>:
-          entrepreneur, investisseur, trader, etc
+          <span style={{ fontWeight: 'bold' }}>Homme et femme d’affaires</span> 
+          <span> : entrepreneur, investisseur, trader, etc</span>
         </div>
         <br />
         <div
@@ -75,8 +75,8 @@ const Elite = () => {
             padding: '15px',
           }}
         >
-          <span style={{ fontWeight: 'bold' }}>Artistes</span>: musique, cinéma,
-          média, etc
+          <span style={{ fontWeight: 'bold' }}>Artistes</span>
+          <span> : musique, cinéma, média, etc</span>
         </div>
         <br />
         <div
@@ -86,8 +86,8 @@ const Elite = () => {
             padding: '15px',
           }}
         >
-          <span style={{ fontWeight: 'bold' }}>Célébrités</span>: sportif,
-          animateur TV, influenceur, etc
+          <span style={{ fontWeight: 'bold' }}>Célébrités</span>
+          <span> : sportif, animateur TV, influenceur, etc</span>
         </div>
       </Grid>
     </Grid>
