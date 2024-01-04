@@ -1,25 +1,32 @@
+import emailjs from '@emailjs/browser'
 import { Button, Grid } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
-import { CSSProperties } from 'react'
+import { CSSProperties, useRef } from 'react'
 import { useForm } from 'react-hook-form'
-import emailjs from '@emailjs/browser';
-import { useRef } from 'react'
 
 export default function Contact() {
   const { register, handleSubmit } = useForm()
-  const form = useRef();
+  const form = useRef<any>()
 
   const onSubmit = (data: any) => {
     console.log(data)
     console.log(form.current)
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-    .then((result) => {
-        console.log(result.text);
-    }, (error) => {
-        console.log(error.text);
-    });
-
+    emailjs
+      .sendForm(
+        'YOUR_SERVICE_ID',
+        'YOUR_TEMPLATE_ID',
+        form.current,
+        'YOUR_PUBLIC_KEY'
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+        },
+        (error) => {
+          console.log(error.text)
+        }
+      )
   }
 
   const styleLink: CSSProperties = {
@@ -77,7 +84,7 @@ export default function Contact() {
                   borderRadius: '8px',
                   backgroundColor: '#B18F40',
                   width: '70%',
-                  color: "white",
+                  color: 'white',
                 }}
                 type="text"
                 id="nom"
@@ -105,7 +112,7 @@ export default function Contact() {
                   borderRadius: '8px',
                   backgroundColor: '#B18F40',
                   width: '70%',
-                  color: "white",
+                  color: 'white',
                 }}
                 className="placeholder-white text-sm"
                 type="email"
@@ -140,7 +147,7 @@ export default function Contact() {
                   backgroundColor: '#B18F40',
                   width: '70%',
                   height: '110px',
-                  color: "white",
+                  color: 'white',
                 }}
                 className="placeholder-white text-sm"
                 placeholder="Veuillez entrer votre message"
