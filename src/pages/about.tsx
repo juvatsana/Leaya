@@ -24,7 +24,7 @@ const about = () => {
         item
         sm={12}
         md={6}
-        className="relative flex-col text-justify p-10 md:text-2xl font-thin"
+        className="relative flex-col text-justify p-10 text-2xl"
       >
         <h1
           style={{

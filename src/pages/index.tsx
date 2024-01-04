@@ -44,7 +44,7 @@ export default function App() {
       }
 
   return (
-    <Grid container style={{ justifyContent: 'center' }}>
+    <Grid container style={{ justifyContent: 'center' }} className='text-2xl'>
       <Grid item sm={12} md={6} className="relative">
         <h1 style={styleTitle}>
           <span 

@@ -7,7 +7,7 @@ const feature_video_presentation = () => {
       container
       alignItems="center"
       justifyContent="center"
-      className="p-0 py-10 m-0 overflow-hidden font-thin"
+      className="p-0 py-10 m-0 overflow-hidden font-thin text-2xl"
       height="100%"
       style={{ justifyContent: 'center', color: 'white', fontSize: '24px' }}
     >

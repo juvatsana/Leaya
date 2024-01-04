@@ -217,14 +217,15 @@ export default function Navbar() {
             style={{ textDecoration: 'none' }}>
               <Button
                 onClick={handleCloseMenu}
+                className='text-xl'
                 style={{
                   background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
                   borderRadius: '20px',
-                  padding: '5px',
+                  padding: '8px',
                 }}
                 sx={{
                   my: 2,
-                  color: 'black',
+                  color: 'white',
                   display: 'block',
                   fontStyle: 'normal',
                   background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',

@@ -5,8 +5,8 @@ const Elite = () => {
   return (
     <Grid
       container
-      style={{ color: 'white', fontSize: '24px'}}
-      className="p-0 m-0 font-thin"
+      style={{ color: 'white'}}
+      className="p-0 m-0 font-thin text-2xl"
     >
       <Grid 
         item 

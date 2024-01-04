@@ -43,8 +43,8 @@ const Features = () => {
         spacing={2}
         alignItems="start"
         justifyContent="center"
-        style={{ color: 'white', fontSize: '24px' }}
-        className='font-thin'
+        style={{ color: 'white'}}
+        className='font-thin text-2xl'
       >
         <Grid item xs={11}>
           <h1
@@ -60,7 +60,7 @@ const Features = () => {
           >
             UNE APPLICATION AUX MULTIPLES FONCTIONNALITÉS
           </h1>
-          <p style={{ fontSize: '24px', paddingBottom: '2rem' }}>
+          <p style={{ paddingBottom: '2rem' }}>
             L'une des caractéristiques uniques de{' '}
             <span style={{ color: 'transparent', backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', backgroundClip: 'text'  }}>LEAYA ELITE</span> est son
             algorithme sophistiqué qui permet de trouver des personnes

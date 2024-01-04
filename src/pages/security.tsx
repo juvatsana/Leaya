@@ -8,7 +8,7 @@ const Security = () => {
       style={{ justifyContent: 'center', color: 'white' }}
       alignItems="center"
       justifyContent="center"
-      className="sm:p-5 m-0 overflow-hidden font-thin"
+      className="sm:p-5 m-0 overflow-hidden font-thin text-2xl"
       height="100%"
     >
       <Grid item sm={12} md={6} className="relative">

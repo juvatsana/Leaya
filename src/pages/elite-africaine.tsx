@@ -8,7 +8,7 @@ const Elite = () => {
       style={{ justifyContent: 'center', color: 'white' }}
       alignItems="center"
       justifyContent="center"
-      className="p-0 m-0 overflow-hidden font-thin"
+      className="p-0 m-0 overflow-hidden text-2xl font-thin"
     >
       <Grid item sm={12} md={6} className="relative">
         <Image
@@ -24,7 +24,7 @@ const Elite = () => {
         item
         sm={12}
         md={6}
-        className="relative flex-col  p-10 md:text-2xl "
+        className="relative flex-col p-10"
       >
         <h1
           style={{

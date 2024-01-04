@@ -4,7 +4,7 @@ const Responsable = () => {
   return (
     <Grid
       container
-      style={{ color: 'white', fontSize:'22px' }}
+      style={{ color: 'white'}}
       alignItems="center"
       justifyContent="center"
       className="p-12 md:p-0 m-0 overflow-hidden font-thin"
@@ -13,13 +13,13 @@ const Responsable = () => {
         item
         sm={12}
         md={10}
-        className="relative flex-col text-justify md:text-2xl "
+        className="relative flex-col text-justify text-2xl "
       >
         <h1
           style={{
             position: 'relative',
             color: 'white',
-            fontSize: '40px',
+            fontSize: '48px',
             fontWeight: '600',
             padding: '1rem',
             lineHeight: '3.5rem',
