@@ -21,12 +21,7 @@ const feature_video_presentation = () => {
           style={{ borderRadius: '97px' }}
         />
       </Grid>
-      <Grid
-        item
-        sm={12}
-        md={6}
-        className="relative flex-col text-justify p-10 md:text-2xl "
-      >
+      <Grid item sm={12} md={6} className="relative flex-col p-10 md:text-2xl ">
         <h1
           style={{
             position: 'relative',
@@ -41,9 +36,18 @@ const feature_video_presentation = () => {
           A PROPOS DE NOUS
         </h1>
         <p>
-          <span style={{ color: 'transparent', backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', backgroundClip: 'text' }}>LEAYA ELITE</span> est une
-          application dédiée aux rencontres et au réseautage en Afrique. Elle
-          vise à connecter les communautés et les amoureux du continent à
+          <span
+            style={{
+              color: 'transparent',
+              backgroundImage:
+                'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+              backgroundClip: 'text',
+            }}
+          >
+            LEAYA ELITE
+          </span>{' '}
+          est une application dédiée aux rencontres et au réseautage en Afrique.
+          Elle vise à connecter les communautés et les amoureux du continent à
           travers sa plateforme mobile.
           <span style={{ color: '#B18F40' }}>
             {' '}

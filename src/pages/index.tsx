@@ -19,7 +19,7 @@ export default function App() {
         color: 'white',
         fontSize: '40px',
         fontWeight: '600',
-        padding: '2rem',
+        paddingLeft: '2rem',
         lineHeight: '3.5rem',
       }
     : {
@@ -33,10 +33,15 @@ export default function App() {
         lineHeight: '3.5rem',
       }
 
-  const styleDownload = isSmallScreen ? 'pl-8' : 'relative top-10 left-32'
+  const styleDownload = isSmallScreen ? 'pl-8' : 'relative left-32'
 
   const styleImage: CSSProperties = isSmallScreen
-    ? { height: '65vh', position: 'relative', width: '60vw' }
+    ? {
+        height: '65vh',
+        position: 'relative',
+        width: '60vw',
+        top: '4rem',
+      }
     : {
         width: '300px',
         height: '80vh',
@@ -44,27 +49,48 @@ export default function App() {
       }
 
   return (
-    <Grid container style={{ justifyContent: 'center' }} className='text-2xl'>
+    <Grid container style={{ justifyContent: 'center' }} className="text-2xl">
       <Grid item sm={12} md={6} className="relative">
         <h1 style={styleTitle}>
-          <span 
-          style={{ 
-            color: 'transparent',
-            backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
-            backgroundClip: 'text'
-            }}>
-              Leaya Elite
+          <span
+            style={{
+              color: 'transparent',
+              backgroundImage:
+                'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+              backgroundClip: 'text',
+            }}
+          >
+            Leaya Elite
           </span>
-          , la technologie
-          au coeur de l'excellence
+          , la technologie au coeur de l'excellence
         </h1>
+        <br></br>
+        <br></br>
+        <Image
+          className={styleDownload}
+          src="/assets/download_app2.png"
+          alt="lien de téléchargement"
+          width="400"
+          height="90"
+        />
+        <br></br>
         <Link href="https://apps.apple.com/fr/app/leaya-elite/id6474127173">
           <Image
             className={styleDownload}
-            src="./assets/download_app2.svg"
+            src="/assets/ios.png"
             alt="lien de téléchargement"
-            width="600"
-            height="600"
+            width="200"
+            height="200"
+          />
+        </Link>
+        <br></br>
+        <Link href="https://play.google.com/store/apps/details?id=app.leayaapp.com">
+          <Image
+            className={styleDownload}
+            src="/assets/android.png"
+            alt="lien de téléchargement"
+            width="200"
+            height="200"
           />
         </Link>
       </Grid>
@@ -79,7 +105,7 @@ export default function App() {
         }}
       >
         <div style={styleImage}>
-          <Image src="./assets/phone.svg" alt="phone" layout="fill" />
+          <Image src="/assets/phone.png" alt="phone" layout="fill" />
         </div>
       </Grid>
     </Grid>

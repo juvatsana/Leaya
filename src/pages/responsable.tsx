@@ -9,12 +9,7 @@ const Responsable = () => {
       justifyContent="center"
       className="p-12 md:p-0 m-0 overflow-hidden font-thin"
     >
-      <Grid
-        item
-        sm={12}
-        md={10}
-        className="relative flex-col text-justify text-2xl "
-      >
+      <Grid item sm={12} md={10} className="relative flex-col text-2xl">
         <h1
           style={{
             position: 'relative',
