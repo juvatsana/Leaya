@@ -87,6 +87,7 @@ export default function Navbar() {
     <AppBar
       position="static"
       sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}
+      className='pb-16'
     >
       <Container maxWidth="xl" className="flex justify-center pt-5">
         <Toolbar disableGutters>

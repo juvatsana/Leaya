@@ -32,7 +32,7 @@ export default function App() {
 
 
   return (
-    <Grid container style={{ justifyContent: 'center' }} className="text-2xl pt-20">
+    <Grid container style={{ justifyContent: 'center' }} className="text-2xl">
       <Grid item sm={12} md={6} lg={7} className="flex flex-col pl-10 lg:pl-20 lg:pr-5 xl:pl-36 2xl:pl-60" >
         <h1 style={styleTitle} className='pb-10'>
           <span

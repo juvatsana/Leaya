@@ -10,7 +10,7 @@ export default function FeatureAdvancedSearch() {
       style={{ justifyContent: 'center', color: 'white', fontSize: '24px' }}
       alignItems="center"
       justifyContent="center"
-      className="p-0 py-10 m-0 overflow-hidden font-thin text-2xl"
+      className="overflow-hidden font-thin text-2xl"
       height="100%"
     >
       <Grid item sm={12} md={6} className="relative">

@@ -41,14 +41,13 @@ export default function Elite() {
         sm={12}
         md={12}
         lg={6}
-        className="relative flex-col md:text-2xl px-10"
-        // style={{fontSize: "24px", padding: '5%'}}
+        className="relative flex-col md:text-2xl px-10 lg:pr-10 lg:pl-0"
       >
         <h1
           style={{
             position: 'relative',
             color: 'white',
-            fontSize: '40px',
+            fontSize: '48px',
             fontWeight: '600',
             paddingBottom: '2rem',
             lineHeight: '3.5rem',
