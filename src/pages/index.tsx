@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CSSProperties } from 'react'
 
-
 const heroSectionStyle = {
   backgroundImage: "url('/assets/background.svg')",
   backgroundRepeat: 'no-repeat',
@@ -30,11 +29,20 @@ export default function App() {
         lineHeight: '3.5rem',
       }
 
-
   return (
-    <Grid container style={{ justifyContent: 'center' }} className="text-2xl pt-20">
-      <Grid item sm={12} md={6} lg={7} className="flex flex-col pl-10 lg:pl-20 lg:pr-5 xl:pl-36 2xl:pl-60" >
-        <h1 style={styleTitle} className='pb-10'>
+    <Grid
+      container
+      style={{ justifyContent: 'center' }}
+      className="text-2xl pt-20"
+    >
+      <Grid
+        item
+        sm={12}
+        md={6}
+        lg={7}
+        className="flex flex-col pl-10 lg:pl-20 lg:pr-5 xl:pl-36 2xl:pl-60"
+      >
+        <h1 style={styleTitle} className="pb-10">
           <span
             style={{
               color: 'transparent',
@@ -46,29 +54,25 @@ export default function App() {
           </span>
           , la technologie au coeur de l'excellence
         </h1>
-        <br></br>
-        <br></br>
         <Image
-          className='pb-10' 
+          className="pb-10"
           src="/assets/download_app2.png"
           alt="lien de téléchargement"
           width="400"
           height="90"
         />
-        <br></br>
         <Link href="https://apps.apple.com/fr/app/leaya-elite/id6474127173">
           <Image
-            className='pb-10' 
+            className="pb-10"
             src="/assets/ios.png"
             alt="lien de téléchargement"
             width="200"
             height="200"
           />
         </Link>
-        <br></br>
         <Link href="https://play.google.com/store/apps/details?id=app.leayaapp.com">
           <Image
-            className='pb-10' 
+            className="pb-10"
             src="/assets/android.png"
             alt="lien de téléchargement"
             width="200"
@@ -87,13 +91,8 @@ export default function App() {
           position: 'relative',
         }}
       >
-        <div >
-          <Image 
-          src="/assets/phone.png" 
-          alt="phone" 
-          width="400" 
-          height='914'
-          />
+        <div>
+          <Image src="/assets/phone.png" alt="phone" width="400" height="914" />
         </div>
       </Grid>
     </Grid>
