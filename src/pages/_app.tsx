@@ -1,9 +1,15 @@
 import Navbar from '@/components/NavBar/NavBar'
 import { ThemeProvider, createTheme } from '@mui/material'
+import { green, purple } from '@mui/material/colors';
 import type { AppProps } from 'next/app'
 import 'tailwindcss/base.css'
 import 'tailwindcss/components.css'
 import 'tailwindcss/utilities.css'
+import { Raleway } from 'next/font/google'
+
+const raleway = Raleway({
+  subsets: ['latin']
+})
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const heroSectionStyle = {
@@ -14,25 +20,21 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   }
 
   const theme = createTheme({
-    components: {
-      MuiList: {
-        styleOverrides: {
-          root: {
-            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
-            color: 'white',
-          },
-        },
-      },
+    palette: {
+      background: {
+        paper: "linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)"
+      }
     },
-    // Ajoutez d'autres configurations de thème ici
-  })
+  });
+
+  const mainStyle = `${raleway.className} min-h-screen overflow-hidden`
 
   return (
-    <main style={heroSectionStyle} className="min-h-screen overflow-hidden">
-      <ThemeProvider theme={theme}>
-        <Navbar></Navbar>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </main>
+    <ThemeProvider theme={theme}>
+      <main style={heroSectionStyle} className={mainStyle}>
+          <Navbar></Navbar>
+          <Component {...pageProps} />
+      </main>
+    </ThemeProvider>
   )
 }

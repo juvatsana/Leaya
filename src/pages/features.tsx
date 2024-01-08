@@ -1,38 +1,40 @@
 import CardFeature from '@/components/CardFeature/CardFeature'
 import { Grid } from '@mui/material'
 import Link from 'next/link'
+import { useTheme } from '@mui/material/styles';
 
-const Features = () => {
+export default function Features() {
+  const theme = useTheme()
   const features = [
     {
       mediaPath: 'assets/featuresPictures/feature1.png',
       mediaTitle: 'La présentation vidéo',
       title: 'La présentation vidéo',
-      url: 'feature_video_presentation',
+      url: 'Feature_video_presentation',
     },
     {
       mediaPath: 'assets/featuresPictures/feature2.png',
       mediaTitle: 'La recherche avancée',
       title: 'La recherche avancée',
-      url: 'feature_advanced_search',
+      url: 'Feature_advanced_search',
     },
     {
       mediaPath: 'assets/featuresPictures/feature3.png',
       mediaTitle: 'La messagerie instantanée',
       title: 'La messagerie instantanée',
-      url: 'feature_instant_messaging',
+      url: 'Feature_instant_messaging',
     },
     {
       mediaPath: 'assets/featuresPictures/feature4.png',
       mediaTitle: 'Le système de Match',
       title: 'Le système de Match',
-      url: 'feature_matching_system',
+      url: 'Feature_matching_system',
     },
     {
       mediaPath: 'assets/featuresPictures/feature5.png',
       mediaTitle: 'Les notifications et alertes',
       title: 'Les notifications et alertes',
-      url: 'feature_notifications',
+      url: 'Feature_notifications',
     },
   ]
 
@@ -62,10 +64,10 @@ const Features = () => {
           </h1>
           <p style={{ paddingBottom: '2rem' }}>
             L'une des caractéristiques uniques de{' '}
-            <span style={{ color: 'transparent', backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', backgroundClip: 'text'  }}>LEAYA ELITE</span> est son
+            <span style={{ color: 'transparent', backgroundImage: `${theme.palette.background.paper}`, backgroundClip: 'text'  }}>LEAYA ELITE</span> est son
             algorithme sophistiqué qui permet de trouver des personnes
             compatibles en fonction des données collectées. Avec{' '}
-            <span style={{ color: 'transparent', backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', backgroundClip: 'text'  }}>LEAYA ELITE</span>, les
+            <span style={{ color: 'transparent', backgroundImage: `${theme.palette.background.paper}`, backgroundClip: 'text'  }}>LEAYA ELITE</span>, les
             utilisateurs bénéficieront de fonctionnalités pratiques telles que :
           </p>
         </Grid>
@@ -86,5 +88,3 @@ const Features = () => {
     </>
   )
 }
-
-export default Features

@@ -1,4 +1,5 @@
 'use client'
+import * as React from 'react'
 import Logo from '@/components/Logo/Logo'
 import MenuIcon from '@mui/icons-material/Menu'
 import AppBar from '@mui/material/AppBar'
@@ -11,53 +12,53 @@ import MenuItem from '@mui/material/MenuItem'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import Link from 'next/link'
-import * as React from 'react'
+import { useTheme } from '@mui/material/styles';
 
-
+const itemsStyle = "sm:text-sm md:text-md lg:text-lg xl:text-xl ml-5"
 const menuItems = [
   {
     label: 'A propos de nous',
-    file: 'about',
+    file: 'About',
     subMenu: [
-      { label: 'A propos de nous', file: 'about' },
-      { label: 'Une plateforme responsable', file: 'responsable' },
-      { label: "Connecter l'Elite Africaine", file: 'elite-africaine' },
+      { label: 'A propos de nous', file: 'About' },
+      { label: 'Une plateforme responsable', file: 'Responsable' },
+      { label: "Connecter l'Elite Africaine", file: 'Elite-africaine' },
     ],
   },
   {
     label: 'Fonctionnalités',
-    file: 'features',
+    file: 'Features',
     subMenu: [],
   },
   {
     label: 'Sécurité et confidentialité',
-    file: 'security',
+    file: 'Security',
     subMenu: [],
   },
   {
     label: 'Rejoindre l’élite',
-    file: 'elite',
+    file: 'Elite',
     subMenu: [],
   },
   {
     label: 'Contacts',
-    file: 'contact',
+    file: 'Contact',
     subMenu: [],
   },
 ]
 
 const menuMobile = [
-  { file: 'about', label: 'A propos de nous' },
-  { file: 'responsable', label: 'Une plateforme responsable' },
-  { file: 'elite-africaine', label: "Connecter l'Elite Africaine" },
-  { file: 'features', label: 'Fonctionnalités' },
-  { file: 'security', label: 'Sécurité et confidentialité' },
-  { file: 'elite', label: 'Rejoindre l’élite' },
-  { file: 'contact', label: 'Contacts' },
+  { file: 'About', label: 'A propos de nous' },
+  { file: 'Responsable', label: 'Une plateforme responsable' },
+  { file: 'Elite-africaine', label: "Connecter l'Elite Africaine" },
+  { file: 'Features', label: 'Fonctionnalités' },
+  { file: 'Security', label: 'Sécurité et confidentialité' },
+  { file: 'Elite', label: 'Rejoindre l’élite' },
+  { file: 'Contact', label: 'Contacts' },
 ]
 
 export default function Navbar() {
-
+  const theme = useTheme();
   const [anchorElMenu, setAnchorElMenu] = React.useState<null | HTMLElement>(
     null
   )
@@ -87,7 +88,7 @@ export default function Navbar() {
       position="static"
       sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}
     >
-      <Container maxWidth="xl" className="flex justify-center p-5">
+      <Container maxWidth="xl" className="flex justify-center pt-5">
         <Toolbar disableGutters>
           <Logo></Logo>
           <Box
@@ -97,16 +98,16 @@ export default function Navbar() {
               marginLeft: '8rem',
             }}
           >
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenMenu}
-              color="inherit"
-            >
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenMenu}
+                color="inherit"
+              >
               <MenuIcon />
-            </IconButton>
+              </IconButton>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElMenu}
@@ -129,28 +130,39 @@ export default function Navbar() {
                 <Link
                   key={page.label}
                   href={page.file}
-                  style={{ textDecoration: 'none' }}
+                  style={{ textDecoration: 'none'}}
                 >
-                  <MenuItem key={page.label} onClick={handleCloseMenu}>
+                  <MenuItem 
+                  className='mb-1'
+                  key={page.label} 
+                  onClick={handleCloseMenu}
+                  style={{
+                    color: 'white',
+                    background: `${theme.palette.background.paper}`
+                  }}
+                  >
                     <Typography textAlign="center">{page.label}</Typography>
                   </MenuItem>
                 </Link>
               ))}
             </Menu>
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box 
+            sx={{ 
+              flexGrow: 1, 
+              display: { xs: 'none', md: 'flex' } ,
+            }}
+          >
             {menuItems.map((menuItem) => (
               <div key={menuItem.label}>
                 {menuItem.subMenu.length > 0 ? (
                   <div>
                     <Button
-                      className='sm:text-lg lg:text-xl'
+                      className={itemsStyle}
                       color="inherit"
                       onClick={handleOpenSubMenu}
                       style={{ textTransform: 'initial'}}
                       sx={{
-                        my: 2,
-                        mx: 2,
                         color: 'white',
                         display: 'block',
                         fontStyle: 'normal',
@@ -171,11 +183,17 @@ export default function Navbar() {
                           href={subMenuItem.file}
                           style={{
                             textDecoration: 'none',
+                            color: 'white',
+                            background: `${theme.palette.background.paper}`
                           }}
                         >
                           <MenuItem
+                            className='mb-1'
                             key={subMenuItem.label}
                             onClick={handleCloseSubMenu}
+                            style={{
+                              background: `${theme.palette.background.paper}`
+                            }}
                           >
                             <Typography color="inherit">
                               {subMenuItem.label}
@@ -192,13 +210,11 @@ export default function Navbar() {
                     style={{ textDecoration: 'none' }}
                   >
                     <Button
-                      className='sm:text-lg lg:text-xl'
+                      className={itemsStyle}
                       key={menuItem.label}
                       onClick={handleCloseMenu}
                       style={{ textTransform: 'initial'}}
                       sx={{
-                        my: 2,
-                        mx: 2,
                         color: 'white',
                         display: 'block',
                         fontStyle: 'normal',
@@ -217,20 +233,17 @@ export default function Navbar() {
             style={{ textDecoration: 'none' }}>
               <Button
                 onClick={handleCloseMenu}
-                className='text-xl'
+                className={itemsStyle}
                 style={{
-                  background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
-                  borderRadius: '20px',
-                  padding: '8px',
+                  background: `${theme.palette.background.paper}`,
                 }}
                 sx={{
-                  my: 2,
-                  color: 'white',
+                  color: 'black',
                   display: 'block',
                   fontStyle: 'normal',
-                  background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
-                  borderRadius: '15px',
+                  borderRadius: '20px',
                   textTransform: 'none',
+                  padding: '8px'
                 }}
               >
                 Télécharger l'application

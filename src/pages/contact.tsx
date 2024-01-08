@@ -4,8 +4,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CSSProperties, useRef } from 'react'
 import { useForm } from 'react-hook-form'
+import { useTheme } from '@mui/material/styles';
+
 
 export default function Contact() {
+  const theme = useTheme()
   const { register, handleSubmit } = useForm()
   const form = useRef<any>()
 
@@ -60,10 +63,10 @@ export default function Contact() {
         <span style={{ 
           fontWeight: 'bold', 
           color: 'transparent', 
-          backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', 
+          backgroundImage: `${theme.palette.background.paper}`, 
           backgroundClip: 'text',
         }}>
-          Besoin d’aide? Nous sommes là pour vous
+          Besoin d’aide ? Nous sommes là pour vous
         </span>
         <form ref={form} onSubmit={handleSubmit(onSubmit)}>
           <Grid container style={{ justifyContent: 'center' }}>
@@ -76,7 +79,7 @@ export default function Contact() {
                 style={{
                   fontWeight: 'bold',
                   color: 'transparent', 
-                  backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', 
+                  backgroundImage: `${theme.palette.background.paper}`, 
                   backgroundClip: 'text',
                 }}
                 htmlFor="nom"
@@ -89,7 +92,7 @@ export default function Contact() {
                 style={{
                   padding: '10px',
                   borderRadius: '8px',
-                  background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+                  background: `${theme.palette.background.paper}`,
                   width: '70%',
                   color: 'white',
                 }}
@@ -109,7 +112,7 @@ export default function Contact() {
                 style={{ 
                   fontWeight: 'bold', 
                   color: 'transparent', 
-                  backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', 
+                  backgroundImage: `${theme.palette.background.paper}`, 
                   backgroundClip: 'text', 
                 }}
                 htmlFor="email"
@@ -122,7 +125,7 @@ export default function Contact() {
                 style={{
                   padding: '10px',
                   borderRadius: '8px',
-                  background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+                  background: `${theme.palette.background.paper}`,
                   width: '70%',
                   color: 'white',
                 }}
@@ -149,7 +152,7 @@ export default function Contact() {
                 style={{ 
                   fontWeight: 'bold', 
                   color: 'transparent', 
-                  backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', 
+                  backgroundImage: `${theme.palette.background.paper}`, 
                   backgroundClip: 'text', 
                 }}
               >
@@ -161,7 +164,7 @@ export default function Contact() {
                 style={{
                   padding: '10px',
                   borderRadius: '8px',
-                  background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+                  background: `${theme.palette.background.paper}`,
                   width: '70%',
                   height: '110px',
                   color: 'white',
@@ -176,7 +179,7 @@ export default function Contact() {
               <Button
                 size="small"
                 style={{ 
-                  background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', 
+                  background: `${theme.palette.background.paper}`, 
                   color: 'white' 
                 }}
                 type="submit"

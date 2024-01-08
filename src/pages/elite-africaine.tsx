@@ -1,7 +1,9 @@
 import { Grid } from '@mui/material'
 import Image from 'next/image'
+import { useTheme } from '@mui/material/styles';
 
-const Elite = () => {
+export default function Elite() {
+  const theme = useTheme()
   return (
     <Grid
       container
@@ -42,7 +44,7 @@ const Elite = () => {
         <p>
           <span style={{ 
             color: 'transparent',
-            backgroundImage: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            backgroundImage: `${theme.palette.background.paper}`,
             backgroundClip: 'text' 
           }}>
             LEAYA ELITE
@@ -54,7 +56,7 @@ const Elite = () => {
         <br />
         <div
           style={{
-            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -65,7 +67,7 @@ const Elite = () => {
         <br />
         <div
           style={{
-            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -76,7 +78,7 @@ const Elite = () => {
         <br />
         <div
           style={{
-            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -87,7 +89,7 @@ const Elite = () => {
         <br />
         <div
           style={{
-            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -99,9 +101,3 @@ const Elite = () => {
     </Grid>
   )
 }
-
-// LEAYA ELITE est principalement destinée aux professionnels qui cherchent à étendre leur réseau et à explorer de nouvelles opportunités, mais aussi à ceux qui cherchent l’amour. Les différentes cibles de la plateforme sont : Homme et femme d’influence : cadre d’entreprise, politicien, auteur, etc Homme et femme d’affaires : entrepreneur, investisseur, trader, etc
-//Artistes : musique, cinéma, média, etc
-//Célébrités : sportif, animateur TV, influenceur, etc
-
-export default Elite

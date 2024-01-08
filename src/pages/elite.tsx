@@ -1,7 +1,10 @@
 import { Grid } from '@mui/material'
 import Image from 'next/image'
+import { useTheme } from '@mui/material/styles';
 
-const Elite = () => {
+
+export default function Elite() {
+  const theme = useTheme()
   return (
     <Grid
       container
@@ -56,8 +59,7 @@ const Elite = () => {
           <span
             style={{
               color: 'transparent',
-              backgroundImage:
-                'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+              backgroundImage: `${theme.palette.background.paper}`,
               backgroundClip: 'text',
             }}
           >
@@ -68,8 +70,7 @@ const Elite = () => {
           <span
             style={{
               color: 'transparent',
-              backgroundImage:
-                'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+              backgroundImage: `${theme.palette.background.paper}`,
               backgroundClip: 'text',
             }}
           >
@@ -83,8 +84,7 @@ const Elite = () => {
         <br />
         <div
           style={{
-            background:
-              'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -95,8 +95,7 @@ const Elite = () => {
         <br />
         <div
           style={{
-            background:
-              'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -106,8 +105,7 @@ const Elite = () => {
         <br />
         <div
           style={{
-            background:
-              'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -122,5 +120,3 @@ const Elite = () => {
     </Grid>
   )
 }
-
-export default Elite

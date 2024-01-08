@@ -1,7 +1,9 @@
 import { Grid } from '@mui/material'
 import Image from 'next/image'
+import { useTheme } from '@mui/material/styles';
 
-const Security = () => {
+export default function Security() {
+  const theme = useTheme()
   return (
     <Grid
       container
@@ -28,9 +30,6 @@ const Security = () => {
             color: 'white',
             fontWeight: '600',
             textAlign: 'center',
-            // lineHeight: '3.5rem',
-            // padding: '2rem',
-            // fontSize: '48px'
           }}
           className="text-3xl md:text-4xl lg:text-5xl py-5"
         >
@@ -39,7 +38,6 @@ const Security = () => {
         <p
           className="sm:text-xl md:text-2xl"
           style={{
-            // fontSize: '24px',
             paddingBottom: '2rem',
           }}
         >
@@ -47,8 +45,7 @@ const Security = () => {
             <span
               style={{
                 color: 'transparent',
-                backgroundImage:
-                  'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+                backgroundImage: `${theme.palette.background.paper}`,
                 backgroundClip: 'text',
               }}
             >
@@ -69,5 +66,3 @@ const Security = () => {
     </Grid>
   )
 }
-
-export default Security

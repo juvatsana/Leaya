@@ -1,8 +1,11 @@
 import React from 'react'
 import { Card, CardMedia, CardContent, Grid } from '@mui/material'
 import Typography from '@mui/material/Typography';
+import { useTheme } from '@mui/material/styles';
 
-const CardFeature = (props: any) => {
+
+export default function CardFeature(props: any) {
+    const theme = useTheme()
     return (
         <Card 
         className='hover:opacity-50 cursor-pointer'
@@ -11,7 +14,7 @@ const CardFeature = (props: any) => {
             borderRadius: "71px 71px 0 0", 
             border: '#d3bb67 3px solid', 
             borderCollapse: 'collapse', 
-            background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', 
+            background: `${theme.palette.background.paper}`, 
             margin: '5px'
         }}>
             <CardMedia
@@ -24,7 +27,7 @@ const CardFeature = (props: any) => {
             style={{
                 maxHeight: '59px', 
                 color: "white", 
-                background: 'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)', 
+                background: `${theme.palette.background.paper}`, 
                 textAlign: 'center'
             }}>
                 <Typography gutterBottom variant="h2" component="div" style={{fontSize: 'x-large', fontWeight: 'bold'}}>
@@ -34,5 +37,3 @@ const CardFeature = (props: any) => {
         </Card>
     )
 }
-
-export default CardFeature

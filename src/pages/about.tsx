@@ -1,7 +1,9 @@
 import { Grid } from '@mui/material'
 import Image from 'next/image'
+import { useTheme } from '@mui/material/styles';
 
-const about = () => {
+const About = () => {
+  const theme = useTheme()
   return (
     <Grid
       container
@@ -38,8 +40,7 @@ const about = () => {
           <span
             style={{
               color: 'transparent',
-              backgroundImage:
-                'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+              backgroundImage: `${theme.palette.background.paper}`,
               backgroundClip: 'text',
             }}
           >
@@ -74,4 +75,4 @@ const about = () => {
   )
 }
 
-export default about
+export default About

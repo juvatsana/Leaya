@@ -1,6 +1,8 @@
 import { Grid } from '@mui/material'
+import { useTheme } from '@mui/material/styles';
 
-const Responsable = () => {
+export default function Responsable() {
+  const theme = useTheme()
   return (
     <Grid
       container
@@ -24,8 +26,7 @@ const Responsable = () => {
           <span
             style={{
               color: 'transparent',
-              backgroundImage:
-                'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+              backgroundImage: `${theme.palette.background.paper}`,
               backgroundClip: 'text',
             }}
           >
@@ -37,8 +38,7 @@ const Responsable = () => {
           <span
             style={{
               color: 'transparent',
-              backgroundImage:
-                'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+              backgroundImage: `${theme.palette.background.paper}`,
               backgroundClip: 'text',
             }}
           >
@@ -52,8 +52,7 @@ const Responsable = () => {
         <br />
         <div
           style={{
-            background:
-              'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -67,8 +66,7 @@ const Responsable = () => {
         <br />
         <div
           style={{
-            background:
-              'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -83,8 +81,7 @@ const Responsable = () => {
         <br />
         <div
           style={{
-            background:
-              'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -104,8 +101,7 @@ const Responsable = () => {
         <br />
         <div
           style={{
-            background:
-              'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+            background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
             padding: '15px',
           }}
@@ -125,5 +121,3 @@ const Responsable = () => {
     </Grid>
   )
 }
-
-export default Responsable

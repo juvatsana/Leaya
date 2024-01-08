@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CSSProperties } from 'react'
 
+
 const heroSectionStyle = {
   backgroundImage: "url('/assets/background.svg')",
   backgroundRepeat: 'no-repeat',
@@ -30,18 +31,6 @@ export default function App() {
       }
 
 
-  // const styleImage: CSSProperties = isMediumScreen
-  //   ? {
-  //       width: '458px',
-  //       height: 'auto',
-  //       position: 'relative',
-  //     }
-  //   : {
-  //       width: '458px',
-  //       height: 'auto',
-  //       position: 'relative',
-  //     }
-
   return (
     <Grid container style={{ justifyContent: 'center' }} className="text-2xl pt-20">
       <Grid item sm={12} md={6} lg={7} className="flex flex-col pl-10 lg:pl-20 lg:pr-5 xl:pl-36 2xl:pl-60" >
@@ -49,8 +38,7 @@ export default function App() {
           <span
             style={{
               color: 'transparent',
-              backgroundImage:
-                'linear-gradient(222deg, rgba(211,187,103,1) 16%, rgba(162,124,46,1) 100%)',
+              backgroundImage: `${theme.palette.background.paper}`,
               backgroundClip: 'text',
             }}
           >
@@ -99,15 +87,12 @@ export default function App() {
           position: 'relative',
         }}
       >
-        <div 
-        // style={styleImage}
-        >
+        <div >
           <Image 
           src="/assets/phone.png" 
           alt="phone" 
           width="458" 
           height='914'
-          // style={{minHeight: '914px'}}
           />
         </div>
       </Grid>
