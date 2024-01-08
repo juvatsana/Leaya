@@ -91,7 +91,7 @@ export default function App() {
           <Image 
           src="/assets/phone.png" 
           alt="phone" 
-          width="458" 
+          width="400" 
           height='914'
           />
         </div>
