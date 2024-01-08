@@ -20,6 +20,7 @@ export default function App() {
         fontSize: '40px',
         fontWeight: '600',
         paddingLeft: '2rem',
+        margin: '1rem',
         lineHeight: '3.5rem',
       }
     : {
