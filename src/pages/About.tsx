@@ -10,7 +10,7 @@ const About = () => {
       style={{ justifyContent: 'center', color: 'white' }}
       alignItems="center"
       justifyContent="center"
-      className="p-0 py-10 m-0 overflow-hidden font-thin"
+      className="p-0 m-0 overflow-hidden font-thin"
     >
       <Grid item sm={12} md={6} className="relative">
         <Image
@@ -22,14 +22,14 @@ const About = () => {
           style={{ borderRadius: '97px' }}
         />
       </Grid>
-      <Grid item sm={12} md={6} className="relative flex-col p-10 text-2xl">
+      <Grid item sm={12} md={6} className="relative flex-col text-2xl px-10 md:pr-10 md:pl-0 py-10 md:py-0">
         <h1
+          className='sm:pt-38 md:pt-0 pb-5'
           style={{
             position: 'relative',
             color: 'white',
             fontSize: '48px',
             fontWeight: '600',
-            padding: '2rem',
             lineHeight: '3.5rem',
             textAlign: 'center',
           }}

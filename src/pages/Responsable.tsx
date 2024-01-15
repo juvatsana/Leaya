@@ -9,16 +9,15 @@ export default function Responsable() {
       style={{ color: 'white' }}
       alignItems="center"
       justifyContent="center"
-      className="p-12 md:p-0 m-0 overflow-hidden font-thin"
+      className="m-0 overflow-hidden font-thin"
     >
-      <Grid item sm={12} md={10} className="relative flex-col text-2xl">
+      <Grid item sm={11} md={10} className="relative flex-col text-2xl">
         <h1
           style={{
             position: 'relative',
             color: 'white',
             fontSize: '48px',
             fontWeight: '600',
-            padding: '1rem',
             lineHeight: '3.5rem',
             textAlign: 'center',
           }}
@@ -34,7 +33,7 @@ export default function Responsable() {
           </span>
           , UNE PLATEFORME RESPONSABLE
         </h1>
-        <p style={{ padding: '2rem' }}>
+        <p className='pt-5'>
           <span
             style={{
               color: 'transparent',
@@ -51,10 +50,10 @@ export default function Responsable() {
         </p>
         <br />
         <div
+        className='px-5 py-1'
           style={{
             background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
-            padding: '15px',
           }}
         >
           <span style={{ fontWeight: 'bold' }}>Diversité et Inclusion</span> :{' '}
@@ -65,10 +64,10 @@ export default function Responsable() {
         </div>
         <br />
         <div
+        className='px-5 py-1'
           style={{
             background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
-            padding: '15px',
           }}
         >
           <span style={{ fontWeight: 'bold' }}>
@@ -80,10 +79,10 @@ export default function Responsable() {
         </div>
         <br />
         <div
+        className='px-5 py-1'
           style={{
             background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
-            padding: '15px',
           }}
         >
           <span style={{ fontWeight: 'bold' }}>Engagement Communautaire</span> :{' '}
@@ -100,10 +99,10 @@ export default function Responsable() {
         </div>
         <br />
         <div
+        className='px-5 py-1'
           style={{
             background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
-            padding: '15px',
           }}
         >
           <span style={{ fontWeight: 'bold' }}>

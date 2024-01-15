@@ -8,8 +8,6 @@ export default function Elite() {
     <Grid
       container
       style={{ justifyContent: 'center', color: 'white' }}
-      alignItems="center"
-      justifyContent="center"
       className="p-0 m-0 overflow-hidden text-2xl font-thin"
     >
       <Grid item sm={12} md={6} className="relative">
@@ -26,15 +24,15 @@ export default function Elite() {
         item
         sm={12}
         md={6}
-        className="relative flex-col p-10"
+        className="relative flex-col px-10 md:pr-10 md:pl-0 py-10 md:py-0"
       >
         <h1
+          className='pb-5'
           style={{
             position: 'relative',
             color: 'white',
-            fontSize: '40px',
+            fontSize: '48px',
             fontWeight: '600',
-            padding: '2rem',
             lineHeight: '3.5rem',
             textAlign: 'center',
           }}

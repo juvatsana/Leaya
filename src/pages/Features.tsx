@@ -46,7 +46,7 @@ export default function Features() {
         alignItems="start"
         justifyContent="center"
         style={{ color: 'white'}}
-        className='font-thin text-2xl'
+        className='font-thin text-2xl '
       >
         <Grid item xs={11}>
           <h1
@@ -55,7 +55,6 @@ export default function Features() {
               color: 'white',
               fontSize: '36px',
               fontWeight: '600',
-              padding: '2rem',
               lineHeight: '3.5rem',
               textAlign: 'center',
             }}

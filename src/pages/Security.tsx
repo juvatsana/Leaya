@@ -10,7 +10,7 @@ export default function Security() {
       style={{ justifyContent: 'center', color: 'white' }}
       alignItems="center"
       justifyContent="center"
-      className="sm:p-5 m-0 overflow-hidden font-thin text-2xl"
+      className="m-0 overflow-hidden font-thin text-2xl"
       height="100%"
     >
       <Grid item sm={12} md={6} className="relative">
@@ -23,20 +23,21 @@ export default function Security() {
           style={{ borderRadius: '97px' }}
         />
       </Grid>
-      <Grid item sm={12} md={6} className="relative flex-col p-10 ">
+      <Grid item sm={12} md={6} className="relative flex-col px-10 md:pr-10 md:pl-0 py-10 md:py-0">
         <h1
           style={{
             position: 'relative',
             color: 'white',
+            fontSize: '48px',
             fontWeight: '600',
             textAlign: 'center',
           }}
-          className="text-3xl md:text-4xl lg:text-5xl py-5"
+          className="text-3xl md:text-4xl lg:text-5xl pb-10"
         >
           SECURITE ET CONFIDENTIALITE
         </h1>
         <p
-          className="sm:text-xl md:text-2xl"
+          className="text-2xl"
           style={{
             paddingBottom: '2rem',
           }}

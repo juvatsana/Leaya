@@ -50,11 +50,11 @@ export default function Contact() {
   return (
     <Grid container style={{ justifyContent: 'center', fontSize: '24px' }}>
       <Grid item sm={0} md={6}></Grid>
-      <Grid item xs={12} md={6} style={{ paddingLeft: '1rem' }}>
+      <Grid item xs={12} md={6} >
         <h1
           style={{
             color: 'white',
-            fontSize: '40px',
+            fontSize: '48px',
             fontWeight: '600',
           }}
         >
@@ -69,7 +69,7 @@ export default function Contact() {
           Besoin d’aide ? Nous sommes là pour vous
         </span>
         <form ref={form} onSubmit={handleSubmit(onSubmit)}>
-          <Grid container style={{ justifyContent: 'center' }}>
+          <Grid container>
             <Grid
               item
               xs={12}
@@ -98,7 +98,7 @@ export default function Contact() {
                 }}
                 type="text"
                 id="nom"
-                className="placeholder-white text-sm"
+                className="placeholder-white text-base"
                 placeholder="Veuillez entrer votre nom"
                 {...register('nom', { required: 'Ce champ est requis' })}
               />
@@ -129,7 +129,7 @@ export default function Contact() {
                   width: '70%',
                   color: 'white',
                 }}
-                className="placeholder-white text-sm"
+                className="placeholder-white text-base"
                 type="email"
                 id="email"
                 placeholder="Veuillez entrer votre e-mail"
@@ -169,7 +169,7 @@ export default function Contact() {
                   height: '110px',
                   color: 'white',
                 }}
-                className="placeholder-white text-sm"
+                className="placeholder-white text-base"
                 placeholder="Veuillez entrer votre message"
                 id="message"
                 {...register('message', { required: 'Ce champ est requis' })}
