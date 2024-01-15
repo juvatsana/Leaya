@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material'
-import { useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles'
 
 export default function Responsable() {
   const theme = useTheme()
@@ -11,7 +11,7 @@ export default function Responsable() {
       justifyContent="center"
       className="m-0 overflow-hidden font-thin"
     >
-      <Grid item sm={11} md={10} className="relative flex-col text-2xl">
+      <Grid item sm={11} md={10} className="relative flex-col text-2xl p-10">
         <h1
           style={{
             position: 'relative',
@@ -33,7 +33,7 @@ export default function Responsable() {
           </span>
           , UNE PLATEFORME RESPONSABLE
         </h1>
-        <p className='pt-5'>
+        <p className="pt-5">
           <span
             style={{
               color: 'transparent',
@@ -50,7 +50,7 @@ export default function Responsable() {
         </p>
         <br />
         <div
-        className='px-5 py-1'
+          className="px-5 py-1"
           style={{
             background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
@@ -64,7 +64,7 @@ export default function Responsable() {
         </div>
         <br />
         <div
-        className='px-5 py-1'
+          className="px-5 py-1"
           style={{
             background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
@@ -79,7 +79,7 @@ export default function Responsable() {
         </div>
         <br />
         <div
-        className='px-5 py-1'
+          className="px-5 py-1"
           style={{
             background: `${theme.palette.background.paper}`,
             borderRadius: '35px',
@@ -99,7 +99,7 @@ export default function Responsable() {
         </div>
         <br />
         <div
-        className='px-5 py-1'
+          className="px-5 py-1"
           style={{
             background: `${theme.palette.background.paper}`,
             borderRadius: '35px',

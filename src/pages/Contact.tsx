@@ -1,11 +1,10 @@
 import emailjs from '@emailjs/browser'
 import { Button, Grid } from '@mui/material'
+import { useTheme } from '@mui/material/styles'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CSSProperties, useRef } from 'react'
 import { useForm } from 'react-hook-form'
-import { useTheme } from '@mui/material/styles';
-
 
 export default function Contact() {
   const theme = useTheme()
@@ -48,9 +47,13 @@ export default function Contact() {
   }
 
   return (
-    <Grid container style={{ justifyContent: 'center', fontSize: '24px' }}>
+    <Grid
+      container
+      style={{ justifyContent: 'center', fontSize: '24px' }}
+      className="p-10"
+    >
       <Grid item sm={0} md={6}></Grid>
-      <Grid item xs={12} md={6} >
+      <Grid item xs={12} md={6}>
         <h1
           style={{
             color: 'white',
@@ -60,12 +63,14 @@ export default function Contact() {
         >
           Formulaire de contact
         </h1>
-        <span style={{ 
-          fontWeight: 'bold', 
-          color: 'transparent', 
-          backgroundImage: `${theme.palette.background.paper}`, 
-          backgroundClip: 'text',
-        }}>
+        <span
+          style={{
+            fontWeight: 'bold',
+            color: 'transparent',
+            backgroundImage: `${theme.palette.background.paper}`,
+            backgroundClip: 'text',
+          }}
+        >
           Besoin d’aide ? Nous sommes là pour vous
         </span>
         <form ref={form} onSubmit={handleSubmit(onSubmit)}>
@@ -78,8 +83,8 @@ export default function Contact() {
               <label
                 style={{
                   fontWeight: 'bold',
-                  color: 'transparent', 
-                  backgroundImage: `${theme.palette.background.paper}`, 
+                  color: 'transparent',
+                  backgroundImage: `${theme.palette.background.paper}`,
                   backgroundClip: 'text',
                 }}
                 htmlFor="nom"
@@ -109,11 +114,11 @@ export default function Contact() {
               style={{ marginTop: '10px', marginBottom: '10px' }}
             >
               <label
-                style={{ 
-                  fontWeight: 'bold', 
-                  color: 'transparent', 
-                  backgroundImage: `${theme.palette.background.paper}`, 
-                  backgroundClip: 'text', 
+                style={{
+                  fontWeight: 'bold',
+                  color: 'transparent',
+                  backgroundImage: `${theme.palette.background.paper}`,
+                  backgroundClip: 'text',
                 }}
                 htmlFor="email"
               >
@@ -149,11 +154,11 @@ export default function Contact() {
             >
               <label
                 htmlFor="message"
-                style={{ 
-                  fontWeight: 'bold', 
-                  color: 'transparent', 
-                  backgroundImage: `${theme.palette.background.paper}`, 
-                  backgroundClip: 'text', 
+                style={{
+                  fontWeight: 'bold',
+                  color: 'transparent',
+                  backgroundImage: `${theme.palette.background.paper}`,
+                  backgroundClip: 'text',
                 }}
               >
                 Votre message
@@ -178,9 +183,9 @@ export default function Contact() {
             <Grid item xs={12} style={{ marginTop: '20px' }}>
               <Button
                 size="small"
-                style={{ 
-                  background: `${theme.palette.background.paper}`, 
-                  color: 'white' 
+                style={{
+                  background: `${theme.palette.background.paper}`,
+                  color: 'white',
                 }}
                 type="submit"
                 variant="outlined"
