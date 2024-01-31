@@ -20,6 +20,7 @@ const menuItems = [
     label: 'A propos de nous',
     file: 'About',
     subMenu: [
+      { label: 'Actualité', file: 'Actuality' },
       { label: 'A propos de nous', file: 'About' },
       { label: 'Une plateforme responsable', file: 'Responsable' },
       { label: "Connecter l'Elite Africaine", file: 'Elite-africaine' },
@@ -48,6 +49,7 @@ const menuItems = [
 ]
 
 const menuMobile = [
+  { file: 'Actuality', label: 'Actualité' },
   { file: 'About', label: 'A propos de nous' },
   { file: 'Responsable', label: 'Une plateforme responsable' },
   { file: 'Elite-africaine', label: "Connecter l'Elite Africaine" },
