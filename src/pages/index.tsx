@@ -30,11 +30,7 @@ export default function App() {
       }
 
   return (
-    <Grid
-      container
-      style={{ justifyContent: 'center' }}
-      className="text-2xl pt-20"
-    >
+    <Grid container style={{ justifyContent: 'center' }} className="text-2xl">
       <Grid
         item
         sm={12}
