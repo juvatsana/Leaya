@@ -1,6 +1,5 @@
 import Navbar from '@/components/NavBar/NavBar'
 import { ThemeProvider, createTheme } from '@mui/material'
-import { green, purple } from '@mui/material/colors';
 import type { AppProps } from 'next/app'
 import 'tailwindcss/base.css'
 import 'tailwindcss/components.css'

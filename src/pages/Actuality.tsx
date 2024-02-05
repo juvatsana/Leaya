@@ -3,7 +3,7 @@ import { isMobile } from 'react-device-detect'
 
 export default function Actuality() {
   return (
-    <Grid container className="h-screen">
+    <Grid container className="h-dvh">
       <Grid item xs={12} justifyContent="center">
         <h1
           style={{
@@ -25,7 +25,7 @@ export default function Actuality() {
           }
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
-          className="m-auto aspect-video sm:w-4/5 lg:w-3/5 px-10"
+          className= {isMobile ? "m-auto aspect-square h-full w-full px-5 sm:px-0 pt-5 pb-20 top-0" : "m-auto aspect-video sm:w-4/5 lg:w-3/5 px-10"}
           title="Leaya presentation"
         ></iframe>
       </Grid>
